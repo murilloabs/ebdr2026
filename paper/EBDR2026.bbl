@@ -1,0 +1,69 @@
+\begin{thebibliography}{8}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{{Bandarra Filho} e Jabardo(2011)}]{BandarraFilho2011}
+{Bandarra Filho}, E.P. e Jabardo, J.M.S., 2011.
+\newblock \enquote{Convective boiling performance of refrigerant {R}-134a in
+  herringbone and microfin copper tubes}.
+\newblock \emph{International Journal of Refrigeration}, Vol.~29, No.~1, pp.
+  81--91.
+
+\bibitem[{{Cavalini Junior}(2013)}]{CavaliniJunior2013}
+{Cavalini Junior}, A.A., 2013.
+\newblock \emph{Detec\c{c}\~ao e identifica\c{c}\~ao de trincas transversais
+  incipientes em eixos horizontais flex\'iveis de m\'aquinas rotativas}.
+\newblock Ph.D. thesis, Universidade Federal de Uberl\^andia, Uberl\^andia,
+  Brasil.
+
+\bibitem[{{Cavalini Junior} \emph{et~al.}(2015){Cavalini Junior}, Lara-Molina,
+  Sales, Koroishi e Steffen}]{CavaliniJunior2015}
+{Cavalini Junior}, A.A., Lara-Molina, F.A., Sales, T.P., Koroishi, E.H. e
+  Steffen, V., 2015.
+\newblock \enquote{Uncertainty analysis of a flexible rotor supported by fluid
+  film bearings}.
+\newblock \emph{Latin American Journal of Solids and Structures}, Vol.~12, pp.
+  1487--1504.
+
+\bibitem[{Coelho(2017)}]{coelho2017}
+Coelho, F.R., 2017.
+\newblock \emph{Gera\c{c}\~ao de novas correla\c{c}\~oes da
+  soma-ponderada-de-gases-cinza para {H2O} e {CO2} em alta press\~ao}.
+\newblock Master's thesis, Universidade Federal do Rio Grande do Sul, Porto
+  Alegre, Brasil.
+
+\bibitem[{McConnell e Varoto(2008)}]{McConnell.Varoto.2008}
+McConnell, K.G. e Varoto, P.S., 2008.
+\newblock \emph{Vibration Testing: Theory and Practice}.
+\newblock John Wiley \& Sons, New Jersey, 2nd edition.
+
+\bibitem[{MLA(2004)}]{MLA04}
+MLA, 2004.
+\newblock \enquote{How do {I} document sources from the web in my works-cited
+  list?}
+\newblock Modern Language Association. 22 Feb. 2007 <http://www.mla.org>.
+
+\bibitem[{Santos \emph{et~al.}(2013{\natexlab{a}})Santos, Furtado, Frey,
+  Naccache e {de Souza Mendes}}]{Santos2013a}
+Santos, D.D., Furtado, G.M., Frey, S.L., Naccache, M.F. e {de Souza Mendes},
+  P.R., 2013{\natexlab{a}}.
+\newblock \enquote{Flow of elasto-viscoplastic fluids inside a cavity}.
+\newblock In \emph{Proceedings of the 22nd International Congress of Mechanical
+  Engineering - COBEM 2013}. Ribeir\~ao Preto, Brazil.
+
+\bibitem[{Santos \emph{et~al.}(2013{\natexlab{b}})Santos, Furtado, Frey,
+  Naccache e {de Souza Mendes}}]{Santos2013b}
+Santos, D.D., Furtado, G.M., Frey, S.L., Naccache, M.F. e {de Souza Mendes},
+  P.R., 2013{\natexlab{b}}.
+\newblock \enquote{Numerical investigation of elastic and viscous effects on
+  inertial viscoplastic fluid flows}.
+\newblock In \emph{Proceedings of the 22nd International Congress of Mechanical
+  Engineering - COBEM 2013}. Ribeir\~ao Preto, Brazil.
+
+\end{thebibliography}
