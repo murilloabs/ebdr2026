@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.27)  10 AUG 2026 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.27)  10 AUG 2026 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,29 +265,6 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks23
 \inpenc@posthook=\toks24
 )
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-))
-\Gm@cnth=\count287
-\Gm@cntv=\count288
-\c@Gm@tempcnt=\count289
-\Gm@bindingoffset=\dimen165
-\Gm@wd@mp=\dimen166
-\Gm@odd@mp=\dimen167
-\Gm@even@mp=\dimen168
-\Gm@layoutwidth=\dimen169
-\Gm@layoutheight=\dimen170
-\Gm@layouthoffset=\dimen171
-\Gm@layoutvoffset=\dimen172
-\Gm@dimlist=\toks25
-
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
-))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
@@ -327,8 +304,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip99
 \cftfigindent=\skip100
 \cftfignumwidth=\skip101
-\c@lofdepth=\count290
-\c@lotdepth=\count291
+\c@lofdepth=\count287
+\c@lotdepth=\count288
 \cftbeforelottitleskip=\skip102
 \cftafterlottitleskip=\skip103
 \cftbeforetabskip=\skip104
@@ -340,21 +317,21 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box104
 \beforetitleunit=\skip107
 \aftertitleunit=\skip108
-\ttl@plus=\dimen173
-\ttl@minus=\dimen174
-\ttl@toksa=\toks26
-\titlewidth=\dimen175
-\titlewidthlast=\dimen176
-\titlewidthfirst=\dimen177
+\ttl@plus=\dimen165
+\ttl@minus=\dimen166
+\ttl@toksa=\toks25
+\titlewidth=\dimen167
+\titlewidthlast=\dimen168
+\titlewidthfirst=\dimen169
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip109
-\enit@outerparindent=\dimen178
-\enit@toks=\toks27
+\enit@outerparindent=\dimen170
+\enit@toks=\toks26
 \enit@inbox=\box105
-\enit@count@id=\count292
-\enitdp@description=\count293
+\enit@count@id=\count289
+\enitdp@description=\count290
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc.sty
 Package: footmisc 2025/05/09 v7.0b a miscellany of footnote facilities
@@ -362,9 +339,9 @@ Package: footmisc 2025/05/09 v7.0b a miscellany of footnote facilities
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/footmisc\footmisc-202
 2-02-14.sty
 Package: footmisc 2024/12/24 v6.0g a miscellany of footnote facilities
-\FN@temptoken=\toks28
-\footnotemargin=\dimen179
-\@outputbox@depth=\dimen180
+\FN@temptoken=\toks27
+\footnotemargin=\dimen171
+\@outputbox@depth=\dimen172
 Package footmisc Info: Declaring symbol style bringhurst on input line 699.
 Package footmisc Info: Declaring symbol style chicago on input line 707.
 Package footmisc Info: Declaring symbol style wiley on input line 716.
@@ -376,7 +353,9 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 768
 ))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
-
+(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
 .sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
@@ -428,15 +407,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 ty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count294
+\c@section@level=\count291
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count295
+\etb@tempcnta=\count292
 )
-\@linkdim=\dimen181
-\Hy@linkcounter=\count296
-\Hy@pagecounter=\count297
+\@linkdim=\dimen173
+\Hy@linkcounter=\count293
+\Hy@pagecounter=\count294
  (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -445,7 +424,7 @@ Now handling font encoding PD1 ...
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count298
+\Hy@SavedSpaceFactor=\count295
  (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -458,13 +437,13 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count299
+\c@Hy@tempcnt=\count296
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4786.
-\XeTeXLinkMargin=\dimen182
+\XeTeXLinkMargin=\dimen174
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -474,9 +453,9 @@ lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count300
-\Field@Width=\dimen183
-\Fld@charsize=\dimen184
+\Fld@menulength=\count297
+\Field@Width=\dimen175
+\Fld@charsize=\dimen176
 Package hyperref Info: Hyper figures OFF on input line 6065.
 Package hyperref Info: Link nesting OFF on input line 6070.
 Package hyperref Info: Hyper index ON on input line 6073.
@@ -489,9 +468,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count301
-\c@Item=\count302
-\c@Hfootnote=\count303
+\Hy@abspage=\count298
+\c@Item=\count299
+\c@Hfootnote=\count300
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -504,8 +483,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count304
-\c@bookmark@seq@number=\count305
+\Fld@listcount=\count301
+\c@bookmark@seq@number=\count302
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
 ilecheck.sty
@@ -525,14 +504,14 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen185
-\captionmargin=\dimen186
-\caption@leftmargin=\dimen187
-\caption@rightmargin=\dimen188
-\caption@width=\dimen189
-\caption@indent=\dimen190
-\caption@parindent=\dimen191
-\caption@hangindent=\dimen192
+\caption@tempdima=\dimen177
+\captionmargin=\dimen178
+\caption@leftmargin=\dimen179
+\caption@rightmargin=\dimen180
+\caption@width=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\let \@conttempa \relax
@@ -556,8 +535,8 @@ Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count306
-\c@continuedfloat=\count307
+\c@caption@flags=\count303
+\c@continuedfloat=\count304
 Package caption Info: floatflt package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
@@ -566,16 +545,16 @@ Package caption Info: wrapfig package is loaded.
 y
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count308
+\c@subfigure=\count305
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count309
+\c@subtable=\count306
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip111
-\multirow@cntb=\count310
+\multirow@cntb=\count307
 \multirow@dima=\skip112
-\bigstrutjot=\dimen193
+\bigstrutjot=\dimen185
 ) (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip113
@@ -585,24 +564,24 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks29
-\ex@=\dimen194
+\@emptytoks=\toks28
+\ex@=\dimen186
 ))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen195
+\pmbraise@=\dimen187
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count311
+\inf@bad=\count308
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count312
-\leftroot@=\count313
+\uproot@=\count309
+\leftroot@=\count310
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count314
-\DOTSCASE@=\count315
+\classnum@=\count311
+\DOTSCASE@=\count312
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -612,34 +591,34 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen196
+\big@size=\dimen188
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count316
+\macc@depth=\count313
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count317
+\c@MaxMatrixCols=\count314
 \dotsspace@=\muskip17
-\c@parentequation=\count318
-\dspbrk@lvl=\count319
-\tag@help=\toks30
-\row@=\count320
-\column@=\count321
-\maxfields@=\count322
-\andhelp@=\toks31
-\eqnshift@=\dimen197
-\alignsep@=\dimen198
-\tagshift@=\dimen199
-\tagwidth@=\dimen256
-\totwidth@=\dimen257
-\lineht@=\dimen258
-\@envbody=\toks32
+\c@parentequation=\count315
+\dspbrk@lvl=\count316
+\tag@help=\toks29
+\row@=\count317
+\column@=\count318
+\maxfields@=\count319
+\andhelp@=\toks30
+\eqnshift@=\dimen189
+\alignsep@=\dimen190
+\tagshift@=\dimen191
+\tagwidth@=\dimen192
+\totwidth@=\dimen193
+\lineht@=\dimen194
+\@envbody=\toks31
 \multlinegap=\skip114
 \multlinetaggap=\skip115
-\mathdisplay@stack=\toks33
+\mathdisplay@stack=\toks32
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
@@ -656,7 +635,7 @@ Package: expl3 2024-01-04 L3 programming layer (loader)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
 dftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count323
+\l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box108
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
@@ -694,10 +673,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.te
 x
-\XKV@toks=\toks34
-\XKV@tempa@toks=\toks35
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count324
+\XKV@depth=\count321
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
@@ -705,8 +684,8 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count325
-\xs_countb=\count326
+\xs_counta=\count322
+\xs_countb=\count323
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 ) (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
@@ -719,8 +698,8 @@ LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
  (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.tex)
-\ntx@tmpcnta=\count327
-\ntx@cnt=\count328
+\ntx@tmpcnta=\count324
+\ntx@cnt=\count325
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
 Package: fontaxes 2026-01-02 v2.0.2 Font selection axes (deprecated)
@@ -740,20 +719,20 @@ LaTeX Info: Redefining \textsw on input line 47.
 LaTeX Info: Redefining \textssc on input line 48.
 LaTeX Info: Redefining \textulc on input line 49.
 ))
-\tx@sixem=\dimen259
-\tx@y=\dimen260
-\tx@x=\dimen261
-\tx@tmpdima=\dimen262
-\tx@tmpdimb=\dimen263
-\tx@tmpdimc=\dimen264
-\tx@tmpdimd=\dimen265
-\tx@tmpdime=\dimen266
-\tx@tmpdimf=\dimen267
-\tx@dimA=\dimen268
-\tx@dimAA=\dimen269
-\tx@dimB=\dimen270
-\tx@dimBB=\dimen271
-\tx@dimC=\dimen272
+\tx@sixem=\dimen195
+\tx@y=\dimen196
+\tx@x=\dimen197
+\tx@tmpdima=\dimen198
+\tx@tmpdimb=\dimen199
+\tx@tmpdimc=\dimen256
+\tx@tmpdimd=\dimen257
+\tx@tmpdime=\dimen258
+\tx@tmpdimf=\dimen259
+\tx@dimA=\dimen260
+\tx@dimAA=\dimen261
+\tx@dimB=\dimen262
+\tx@dimBB=\dimen263
+\tx@dimC=\dimen264
 LaTeX Info: Redefining \oldstylenums on input line 902.
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\newtxmath.sty
@@ -765,13 +744,13 @@ Package: newtxmath 2024/09/22 v1.754
 y
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
-\tx@cntz=\count329
+\tx@cntz=\count326
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/binhex\binhex.tex)
-\tx@Isdigit=\count330
-\tx@IsAlNum=\count331
-\tx@tA=\toks36
-\tx@tB=\toks37
+\tx@Isdigit=\count327
+\tx@IsAlNum=\count328
+\tx@tA=\toks35
+\tx@tB=\toks36
 \tx@su=\read4
 
 amsthm NOT loaded
@@ -856,7 +835,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
 
 (Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 679.
-\tx@sbptoks=\toks38
+\tx@sbptoks=\toks37
 LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 902.
 LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 903.
 LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 904.
@@ -899,15 +878,15 @@ Package: scalerel 2016/12/29 v1.8 Routines for constrained scaling and stretchi
 ng of objects, relative to a reference object or in absolute terms
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count332
-\calc@Bcount=\count333
-\calc@Adimen=\dimen273
-\calc@Bdimen=\dimen274
+\calc@Acount=\count329
+\calc@Bcount=\count330
+\calc@Adimen=\dimen265
+\calc@Bdimen=\dimen266
 \calc@Askip=\skip116
 \calc@Bskip=\skip117
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count334
+\calc@Ccount=\count331
 \calc@Cskip=\skip118
 )
 \thesrwidth=\skip119
@@ -938,24 +917,24 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTright=\skip130
 \LTpre=\skip131
 \LTpost=\skip132
-\LTchunksize=\count335
-\LTcapwidth=\dimen275
+\LTchunksize=\count332
+\LTcapwidth=\dimen267
 \LT@head=\box111
 \LT@firsthead=\box112
 \LT@foot=\box113
 \LT@lastfoot=\box114
 \LT@gbox=\box115
-\LT@cols=\count336
-\LT@rows=\count337
-\c@LT@tables=\count338
-\c@LT@chunks=\count339
-\LT@p@ftn=\toks39
+\LT@cols=\count333
+\LT@rows=\count334
+\c@LT@tables=\count335
+\c@LT@chunks=\count336
+\LT@p@ftn=\toks38
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen276
-\c@nlinenum=\count340
-\TeXr@lab=\toks40
+\rotheadsize=\dimen268
+\c@nlinenum=\count337
+\TeXr@lab=\toks39
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/threeparttable\threep
 arttable.sty
@@ -964,20 +943,20 @@ Package: threeparttable 2003/06/13  v 3.0
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count341
-\l__siunitx_number_exponent_fixed_int=\count342
-\l__siunitx_number_min_decimal_int=\count343
-\l__siunitx_number_min_integer_int=\count344
-\l__siunitx_number_round_precision_int=\count345
-\l__siunitx_number_lower_threshold_int=\count346
-\l__siunitx_number_upper_threshold_int=\count347
-\l__siunitx_number_group_first_int=\count348
-\l__siunitx_number_group_size_int=\count349
-\l__siunitx_number_group_minimum_int=\count350
-\l__siunitx_angle_tmp_dim=\dimen277
+\l__siunitx_number_uncert_offset_int=\count338
+\l__siunitx_number_exponent_fixed_int=\count339
+\l__siunitx_number_min_decimal_int=\count340
+\l__siunitx_number_min_integer_int=\count341
+\l__siunitx_number_round_precision_int=\count342
+\l__siunitx_number_lower_threshold_int=\count343
+\l__siunitx_number_upper_threshold_int=\count344
+\l__siunitx_number_group_first_int=\count345
+\l__siunitx_number_group_size_int=\count346
+\l__siunitx_number_group_minimum_int=\count347
+\l__siunitx_angle_tmp_dim=\dimen269
 \l__siunitx_angle_marker_box=\box117
 \l__siunitx_angle_unit_box=\box118
-\l__siunitx_compound_count_int=\count351
+\l__siunitx_compound_count_int=\count348
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/translations\translat
 ions.sty
@@ -985,18 +964,18 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
 \l__siunitx_table_tmp_box=\box119
-\l__siunitx_table_tmp_dim=\dimen278
-\l__siunitx_table_column_width_dim=\dimen279
+\l__siunitx_table_tmp_dim=\dimen270
+\l__siunitx_table_column_width_dim=\dimen271
 \l__siunitx_table_integer_box=\box120
 \l__siunitx_table_decimal_box=\box121
 \l__siunitx_table_uncert_box=\box122
 \l__siunitx_table_before_box=\box123
 \l__siunitx_table_after_box=\box124
-\l__siunitx_table_before_dim=\dimen280
-\l__siunitx_table_carry_dim=\dimen281
-\l__siunitx_unit_tmp_int=\count352
-\l__siunitx_unit_position_int=\count353
-\l__siunitx_unit_total_int=\count354
+\l__siunitx_table_before_dim=\dimen272
+\l__siunitx_table_carry_dim=\dimen273
+\l__siunitx_unit_tmp_int=\count349
+\l__siunitx_unit_position_int=\count350
+\l__siunitx_unit_total_int=\count351
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
 z.sty
@@ -1006,9 +985,9 @@ y
 sty
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
 il-common.tex
-\pgfutil@everybye=\toks41
-\pgfutil@tempdima=\dimen282
-\pgfutil@tempdimb=\dimen283
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen274
+\pgfutil@tempdimb=\dimen275
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfut
 il-latex.def
@@ -1032,33 +1011,33 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
 ys.code.tex
-\pgfkeys@pathtoks=\toks42
-\pgfkeys@temptoks=\toks43
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfke
 yslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks44
+\pgfkeys@tmptoks=\toks43
 ))
-\pgf@x=\dimen284
-\pgf@y=\dimen285
-\pgf@xa=\dimen286
-\pgf@ya=\dimen287
-\pgf@xb=\dimen288
-\pgf@yb=\dimen289
-\pgf@xc=\dimen290
-\pgf@yc=\dimen291
-\pgf@xd=\dimen292
-\pgf@yd=\dimen293
+\pgf@x=\dimen276
+\pgf@y=\dimen277
+\pgf@xa=\dimen278
+\pgf@ya=\dimen279
+\pgf@xb=\dimen280
+\pgf@yb=\dimen281
+\pgf@xc=\dimen282
+\pgf@yc=\dimen283
+\pgf@xd=\dimen284
+\pgf@yd=\dimen285
 \w@pgf@writea=\write4
 \r@pgf@reada=\read5
-\c@pgf@counta=\count355
-\c@pgf@countb=\count356
-\c@pgf@countc=\count357
-\c@pgf@countd=\count358
-\t@pgf@toka=\toks45
-\t@pgf@tokb=\toks46
-\t@pgf@tokc=\toks47
-\pgf@sys@id@count=\count359
+\c@pgf@counta=\count352
+\c@pgf@countb=\count353
+\c@pgf@countc=\count354
+\c@pgf@countd=\count355
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count356
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 .cfg
@@ -1077,8 +1056,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 syssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count360
-\pgfsyssoftpath@bigbuffer@items=\count361
+\pgfsyssoftpath@smallbuffer@items=\count357
+\pgfsyssoftpath@bigbuffer@items=\count358
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf
 sysprotocol.code.tex
@@ -1094,12 +1073,12 @@ de.tex
 l.code.tex)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpar
 ser.code.tex
-\pgfmath@dimen=\dimen294
-\pgfmath@count=\count362
+\pgfmath@dimen=\dimen286
+\pgfmath@count=\count359
 \pgfmath@box=\box126
-\pgfmath@toks=\toks48
-\pgfmath@stack@operand=\toks49
-\pgfmath@stack@operation=\toks50
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfun
 ctions.code.tex)
@@ -1123,39 +1102,39 @@ ctions.integerarithmetics.code.tex)
 c.code.tex)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathflo
 at.code.tex
-\c@pgfmathroundto@lastzeros=\count363
+\c@pgfmathroundto@lastzeros=\count360
 ))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.cod
 e.tex)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 orepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen295
-\pgf@picmaxx=\dimen296
-\pgf@picminy=\dimen297
-\pgf@picmaxy=\dimen298
-\pgf@pathminx=\dimen299
-\pgf@pathmaxx=\dimen300
-\pgf@pathminy=\dimen301
-\pgf@pathmaxy=\dimen302
-\pgf@xx=\dimen303
-\pgf@xy=\dimen304
-\pgf@yx=\dimen305
-\pgf@yy=\dimen306
-\pgf@zx=\dimen307
-\pgf@zy=\dimen308
+\pgf@picminx=\dimen287
+\pgf@picmaxx=\dimen288
+\pgf@picminy=\dimen289
+\pgf@picmaxy=\dimen290
+\pgf@pathminx=\dimen291
+\pgf@pathmaxx=\dimen292
+\pgf@pathminy=\dimen293
+\pgf@pathmaxy=\dimen294
+\pgf@xx=\dimen295
+\pgf@xy=\dimen296
+\pgf@yx=\dimen297
+\pgf@yy=\dimen298
+\pgf@zx=\dimen299
+\pgf@zy=\dimen300
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 orepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen309
-\pgf@path@lasty=\dimen310
+\pgf@path@lastx=\dimen301
+\pgf@path@lasty=\dimen302
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 orepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen311
-\pgf@shorten@start@additional=\dimen312
+\pgf@shorten@end@additional=\dimen303
+\pgf@shorten@start@additional=\dimen304
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 orescopes.code.tex
@@ -1163,19 +1142,19 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box127
 \pgf@hbox=\box128
 \pgf@layerbox@main=\box129
-\pgf@picture@serial@count=\count364
+\pgf@picture@serial@count=\count361
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 oregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen313
+\pgflinewidth=\dimen305
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 oretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen314
-\pgf@pt@y=\dimen315
-\pgf@pt@temp=\dimen316
+\pgf@pt@x=\dimen306
+\pgf@pt@y=\dimen307
+\pgf@pt@temp=\dimen308
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 orequick.code.tex
@@ -1192,14 +1171,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 orearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen317
+\pgfarrowsep=\dimen309
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 oreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen318
-\pgf@sys@shading@range@num=\count365
-\pgf@shadingcount=\count366
+\pgf@max=\dimen310
+\pgf@sys@shading@range@num=\count362
+\pgf@shadingcount=\count363
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfc
 oreimage.code.tex
@@ -1238,8 +1217,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
 comp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen319
-\pgf@nodesepend=\dimen320
+\pgf@nodesepstart=\dimen311
+\pgf@nodesepend=\dimen312
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgf
 comp-version-1-18.sty
@@ -1257,10 +1236,10 @@ de.tex))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffo
 r.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen321
-\pgffor@skip=\dimen322
-\pgffor@stack=\toks51
-\pgffor@toks=\toks52
+\pgffor@iter=\dimen313
+\pgffor@skip=\dimen314
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 ))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz\tikz.code.tex
@@ -1269,34 +1248,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
 braryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count367
-\pgfplotmarksize=\dimen323
+\pgf@plot@mark@count=\count364
+\pgfplotmarksize=\dimen315
 )
-\tikz@lastx=\dimen324
-\tikz@lasty=\dimen325
-\tikz@lastxsaved=\dimen326
-\tikz@lastysaved=\dimen327
-\tikz@lastmovetox=\dimen328
-\tikz@lastmovetoy=\dimen329
-\tikzleveldistance=\dimen330
-\tikzsiblingdistance=\dimen331
+\tikz@lastx=\dimen316
+\tikz@lasty=\dimen317
+\tikz@lastxsaved=\dimen318
+\tikz@lastysaved=\dimen319
+\tikz@lastmovetox=\dimen320
+\tikz@lastmovetoy=\dimen321
+\tikzleveldistance=\dimen322
+\tikzsiblingdistance=\dimen323
 \tikz@figbox=\box132
 \tikz@figbox@bg=\box133
 \tikz@tempbox=\box134
 \tikz@tempbox@bg=\box135
-\tikztreelevel=\count368
-\tikznumberofchildren=\count369
-\tikznumberofcurrentchild=\count370
-\tikz@fig@count=\count371
+\tikztreelevel=\count365
+\tikznumberofchildren=\count366
+\tikznumberofcurrentchild=\count367
+\tikz@fig@count=\count368
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
 lematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count372
-\pgfmatrixcurrentcolumn=\count373
-\pgf@matrix@numberofcolumns=\count374
+\pgfmatrixcurrentrow=\count369
+\pgfmatrixcurrentcolumn=\count370
+\pgf@matrix@numberofcolumns=\count371
 )
-\tikz@expandcount=\count375
+\tikz@expandcount=\count372
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibrarytopaths.code.tex
@@ -1312,12 +1291,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 ode.tex
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsco
 re.code.tex
-\t@pgfplots@toka=\toks53
-\t@pgfplots@tokb=\toks54
-\t@pgfplots@tokc=\toks55
-\pgfplots@tmpa=\dimen332
-\c@pgfplots@coordindex=\count376
-\c@pgfplots@scanlineindex=\count377
+\t@pgfplots@toka=\toks52
+\t@pgfplots@tokb=\toks53
+\t@pgfplots@tokc=\toks54
+\pgfplots@tmpa=\dimen324
+\c@pgfplots@coordindex=\count373
+\c@pgfplots@scanlineindex=\count374
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplo
 tssysgeneric.code.tex))
@@ -1328,9 +1307,9 @@ atib\pgfplotsoldpgfsupp_loader.code.tex
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
 braryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks56
-\t@pgf@tokb=\toks57
-\t@pgf@tokc=\toks58
+\t@pgf@toka=\toks55
+\t@pgf@tokb=\toks56
+\t@pgf@tokc=\toks57
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcomp
 atib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
@@ -1342,14 +1321,14 @@ ure\pgfplotsliststructure.code.tex)
 ure\pgfplotsliststructureext.code.tex)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
 ure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count378
+\c@pgfplotsarray@tmp=\count375
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
 ure\pgfplotsmatrix.code.tex)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\p
 gfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count379
-\t@pgfplotstable@a=\toks59
+\c@pgfplotstable@counta=\count376
+\t@pgfplotstable@a=\toks58
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststruct
 ure\pgfplotsdeque.code.tex)
@@ -1361,7 +1340,7 @@ otsbinary.data.code.tex))
 otsutil.verb.code.tex)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfli
 brarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count380
+\c@pgfplotslibrarysurf@no=\count377
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflib
 rarypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -1393,14 +1372,14 @@ aths.code.tex)
 ikz/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodu
 ledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen333
-\pgfdecoratedremainingdistance=\dimen334
-\pgfdecoratedinputsegmentcompleteddistance=\dimen335
-\pgfdecoratedinputsegmentremainingdistance=\dimen336
-\pgf@decorate@distancetomove=\dimen337
-\pgf@decorate@repeatstate=\count381
-\pgfdecorationsegmentamplitude=\dimen338
-\pgfdecorationsegmentlength=\dimen339
+\pgfdecoratedcompleteddistance=\dimen325
+\pgfdecoratedremainingdistance=\dimen326
+\pgfdecoratedinputsegmentcompleteddistance=\dimen327
+\pgfdecoratedinputsegmentremainingdistance=\dimen328
+\pgf@decorate@distancetomove=\dimen329
+\pgf@decorate@repeatstate=\count378
+\pgfdecorationsegmentamplitude=\dimen330
+\pgfdecorationsegmentlength=\dimen331
 )
 \tikz@lib@dec@box=\box136
 )
@@ -1414,13 +1393,13 @@ ikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 ations\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzl
 ibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count382
-\pgfplots@xmin@reg=\dimen340
-\pgfplots@xmax@reg=\dimen341
-\pgfplots@ymin@reg=\dimen342
-\pgfplots@ymax@reg=\dimen343
-\pgfplots@zmin@reg=\dimen344
-\pgfplots@zmax@reg=\dimen345
+\pgfplots@numplots=\count379
+\pgfplots@xmin@reg=\dimen332
+\pgfplots@xmax@reg=\dimen333
+\pgfplots@ymin@reg=\dimen334
+\pgfplots@ymax@reg=\dimen335
+\pgfplots@zmin@reg=\dimen336
+\pgfplots@zmax@reg=\dimen337
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibraryplotmarks.code.tex
@@ -1432,11 +1411,11 @@ File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count383
+\c@r@tfl@t=\count380
 \rotFPtop=\skip133
 \rotFPbot=\skip134
 \rot@float@box=\box137
-\rot@mess@toks=\toks60
+\rot@mess@toks=\toks59
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\empheq.sty
 Package: empheq 2024/08/09 v2.17 Emphasizing equations
@@ -1447,63 +1426,63 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.s
 ty
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
-\g_MT_multlinerow_int=\count384
-\l_MT_multwidth_dim=\dimen346
+\g_MT_multlinerow_int=\count381
+\l_MT_multwidth_dim=\dimen338
 \origjot=\skip135
-\l_MT_shortvdotswithinadjustabove_dim=\dimen347
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen348
-\l_MT_above_intertext_sep=\dimen349
-\l_MT_below_intertext_sep=\dimen350
-\l_MT_above_shortintertext_sep=\dimen351
-\l_MT_below_shortintertext_sep=\dimen352
+\l_MT_shortvdotswithinadjustabove_dim=\dimen339
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen340
+\l_MT_above_intertext_sep=\dimen341
+\l_MT_below_intertext_sep=\dimen342
+\l_MT_above_shortintertext_sep=\dimen343
+\l_MT_below_shortintertext_sep=\dimen344
 \xmathstrut@box=\box138
-\xmathstrut@dim=\dimen353
+\xmathstrut@dim=\dimen345
 )
-\l_EQ_equationtype_int=\count385
-\l_EQ_alignmentmode_int=\count386
-\l_EQ_totalwidth_dim=\dimen354
-\l_EQ_displaywidth_dim=\dimen355
-\l_EQ_temp_linewidth_dim=\dimen356
-\l_EQ_linewidth_dim=\dimen357
-\EmphEqdelimitershortfall=\dimen358
-\EmphEqdelimiterfactor=\count387
-\g_EQ_toptag_height_dim=\dimen359
-\g_EQ_bottomtag_depth_dim=\dimen360
-\g_EQ_toprow_height_dim=\dimen361
-\g_EQ_bottomrow_depth_dim=\dimen362
-\g_EQ_widesttag_dim=\dimen363
+\l_EQ_equationtype_int=\count382
+\l_EQ_alignmentmode_int=\count383
+\l_EQ_totalwidth_dim=\dimen346
+\l_EQ_displaywidth_dim=\dimen347
+\l_EQ_temp_linewidth_dim=\dimen348
+\l_EQ_linewidth_dim=\dimen349
+\EmphEqdelimitershortfall=\dimen350
+\EmphEqdelimiterfactor=\count384
+\g_EQ_toptag_height_dim=\dimen351
+\g_EQ_bottomtag_depth_dim=\dimen352
+\g_EQ_toprow_height_dim=\dimen353
+\g_EQ_bottomrow_depth_dim=\dimen354
+\g_EQ_widesttag_dim=\dimen355
 \EQ_mathdisplay_box=\box139
 \EQ_tag_box=\box140
-\g_EQ_temprow_int=\count388
+\g_EQ_temprow_int=\count385
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pdfpages.sty
 Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
-\ESO@tempdima=\dimen364
-\ESO@tempdimb=\dimen365
+\ESO@tempdima=\dimen356
+\ESO@tempdimb=\dimen357
 )
-\AM@pagewidth=\dimen366
-\AM@pageheight=\dimen367
-\AM@fboxrule=\dimen368
+\AM@pagewidth=\dimen358
+\AM@pageheight=\dimen359
+\AM@fboxrule=\dimen360
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
 File: pppdftex.def 2025/07/23 v0.6g Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count389
+\pdfpages@includegraphics@status=\count386
 \AM@pagebox=\box141
-\AM@global@opts=\toks61
-\AM@pagecnt=\count390
-\AM@toc@title=\toks62
-\AM@lof@heading=\toks63
-\c@AM@survey=\count391
+\AM@global@opts=\toks60
+\AM@pagecnt=\count387
+\AM@toc@title=\toks61
+\AM@lof@heading=\toks62
+\c@AM@survey=\count388
 \AM@templatesizebox=\box142
 ) (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count392
-\float@exts=\toks64
+\c@float@type=\count389
+\float@exts=\toks63
 \float@box=\box143
-\@float@everytoks=\toks65
+\@float@everytoks=\toks64
 \@floatcapt=\box144
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/natbib\bibentry.sty
@@ -1571,17 +1550,17 @@ LaTeX Font Info:    ... okay on input line 54.
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count393
-\scratchdimen=\dimen369
+\scratchcounter=\count390
+\scratchdimen=\dimen361
 \scratchbox=\box145
-\nofMPsegments=\count394
-\nofMParguments=\count395
-\everyMPshowfont=\toks66
-\MPscratchCnt=\count396
-\MPscratchDim=\dimen370
-\MPnumerator=\count397
-\makeMPintoPDFobject=\count398
-\everyMPtoPDFconversion=\toks67
+\nofMPsegments=\count391
+\nofMParguments=\count392
+\everyMPshowfont=\toks65
+\MPscratchCnt=\count393
+\MPscratchDim=\dimen362
+\MPnumerator=\count394
+\makeMPintoPDFobject=\count395
+\everyMPtoPDFconversion=\toks66
 )
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -1593,42 +1572,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-29.59084pt
-* \headheight=14.22636pt
-* \headsep=28.45274pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=111.0pt
-* \marginparsep=11.0pt
-* \columnsep=24.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=-72.2698pt
-* \voffset=-72.2698pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
 Package hyperref Info: Link coloring OFF on input line 54.
-(EBDR2026.out) (EBDR2026.out)
+ (EBDR2026.out) (EBDR2026.out)
 \@outlinefile=\write5
 \openout5 = `EBDR2026.out'.
 
@@ -1644,8 +1589,8 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Command `\dddot' is already robust on input line 54.
 LaTeX Info: Command `\ddddot' is already robust on input line 54.
-\c@mv@tabular=\count399
-\c@mv@boldtabular=\count400
+\c@mv@tabular=\count396
+\c@mv@boldtabular=\count397
 
 
 Package siunitx Warning: Detected the "physics" package:
@@ -1687,234 +1632,166 @@ F (HO)
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)) (texto.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 3.
-
-
-Package natbib Warning: Citation `Friswell2010' on page 1 undefined on input li
-ne 5.
-
-
-Package natbib Warning: Citation `stringer2008' on page 1 undefined on input li
-ne 9.
-
-
-Package natbib Warning: Citation `ozguven1988' on page 1 undefined on input lin
-e 9.
-
-
-Package natbib Warning: Citation `kaplan2012' on page 1 undefined on input line
- 11.
-
-<imagens/gearbox.PNG, id=55, 458.46281pt x 395.22656pt>
-File: imagens/gearbox.PNG Graphic file (type png)
-<use imagens/gearbox.PNG>
-Package pdftex.def Info: imagens/gearbox.PNG  used on input line 15.
-(pdftex.def)             Requested size: 227.62206pt x 196.22574pt.
-
-Package natbib Warning: Citation `lim1991' on page 1 undefined on input line 16
-.
-
-
-Package natbib Warning: Citation `lim1991' on page 1 undefined on input line 16
-.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 21.
-
-Package natbib Warning: Citation `ross' on page 1 undefined on input line 21.
-
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
-e 26.
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.fd
-File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
-)
-LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 26.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 41.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 41
-.
-
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
-File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 4
-1.
-
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 18.23401pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.23401pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
-
-[1{C:/Users/Murillo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/
-Murillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
-
-{C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tl
-f.enc}{C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
-q-ts1.enc} <./imagens/gearbox.PNG>]
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 18.23401pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.23401pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
-
-[2]
-
-Package natbib Warning: Citation `Lalanne1998' on page 3 undefined on input lin
-e 48.
-
+))
+<Figures/logo_ebdr.pdf, id=50, 945.5325pt x 268.00125pt>
+File: Figures/logo_ebdr.pdf Graphic file (type pdf)
+<use Figures/logo_ebdr.pdf>
+Package pdftex.def Info: Figures/logo_ebdr.pdf  used on input line 55.
+(pdftex.def)             Requested size: 180.6774pt x 51.21504pt.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
-e 50.
-(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1minntx.fd
+e 55.
+ (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-50.
-
+55.
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-50.
+55.
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-50.
+55.
 
 (C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
+(Font)              scaled to size 10.0pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 50.
+(Font)              scaled to size 7.3pt on input line 55.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 50.
+(Font)              scaled to size 5.5pt on input line 55.
 
 
-Package natbib Warning: Citation `ross' on page 3 undefined on input line 74.
-
-<imagens/rotor1.PNG, id=75, 365.86688pt x 130.23656pt>
-File: imagens/rotor1.PNG Graphic file (type png)
-<use imagens/rotor1.PNG>
-Package pdftex.def Info: imagens/rotor1.PNG  used on input line 86.
-(pdftex.def)             Requested size: 227.62206pt x 81.02603pt.
+pdfTeX warning: pdflatex.exe (file ./Figures/ABCM_Logo.pdf): PDF inclusion: fou
+nd PDF version <1.6>, but at most version <1.5> allowed
+<Figures/ABCM_Logo.pdf, id=51, 845.0471pt x 597.50829pt>
+File: Figures/ABCM_Logo.pdf Graphic file (type pdf)
+<use Figures/ABCM_Logo.pdf>
+Package pdftex.def Info: Figures/ABCM_Logo.pdf  used on input line 55.
+(pdftex.def)             Requested size: 132.9022pt x 46.09332pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 87.
-<imagens/rotor2.PNG, id=76, 347.79938pt x 122.70844pt>
-File: imagens/rotor2.PNG Graphic file (type png)
-<use imagens/rotor2.PNG>
-Package pdftex.def Info: imagens/rotor2.PNG  used on input line 92.
-(pdftex.def)             Requested size: 227.62206pt x 80.30814pt.
+(Font)              scaled to size 8.0pt on input line 55.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 55
+.
+(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 5
+5.
 
-Package natbib Warning: Citation `jessica2025' on page 3 undefined on input lin
-e 100.
+(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
-
-Package fancyhdr Warning: \headheight is too small (14.22636pt): 
-(fancyhdr)                Make it at least 18.23401pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.23401pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
-
-[3{C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1
--tlf.enc} <./imagens/rotor1.PNG> <./imagens/rotor2.PNG>]
-
-Package natbib Warning: Citation `stringer2008' on page 4 undefined on input li
-ne 106.
-
-
-LaTeX Warning: Reference `eq:matrices' on page 4 undefined on input line 108.
-
-
-Package natbib Warning: Citation `stringer2008' on page 4 undefined on input li
-ne 108.
-
-<imagens/gear_mesh_spring.png, id=97, 732.48656pt x 346.29375pt>
-File: imagens/gear_mesh_spring.png Graphic file (type png)
-<use imagens/gear_mesh_spring.png>
-Package pdftex.def Info: imagens/gear_mesh_spring.png  used on input line 112.
-(pdftex.def)             Requested size: 364.19667pt x 172.17946pt.
-
-Package natbib Warning: Citation `kaplan2012' on page 4 undefined on input line
- 113.
-
-
-Package natbib Warning: Citation `kaplan2012' on page 4 undefined on input line
- 113.
-
-<imagens/gear_repr.png, id=98, 310.91156pt x 201.75375pt>
-File: imagens/gear_repr.png Graphic file (type png)
-<use imagens/gear_repr.png>
-Package pdftex.def Info: imagens/gear_repr.png  used on input line 119.
-(pdftex.def)             Requested size: 273.14923pt x 177.25137pt.
-
-Package natbib Warning: Citation `stringer2008' on page 4 undefined on input li
-ne 120.
-
-
-Package natbib Warning: Citation `stringer2008' on page 4 undefined on input li
-ne 120.
+ []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 160.
+(Font)              scaled to size 14.4pt on input line 76.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 76.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 76.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 9.0pt on input line 76.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 160.
+(Font)              scaled to size 9.0pt on input line 76.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 9.0pt on input line 76.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
+(Font)              scaled to size 9.0pt on input line 76.
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+
+ []
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 10.0pt on input line 81.
+<imagens/gearbox.PNG, id=62, 458.46281pt x 395.22656pt>
+File: imagens/gearbox.PNG Graphic file (type png)
+<use imagens/gearbox.PNG>
+Package pdftex.def Info: imagens/gearbox.PNG  used on input line 91.
+(pdftex.def)             Requested size: 241.84842pt x 208.4921pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [1
+
+{C:/Users/Murillo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Mu
+rillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/Muril
+lo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./Figur
+es/logo_ebdr.pdf> <./imagens/gearbox.PNG> <./Figures/ABCM_Logo.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
+e 102.
+
+(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 102.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1923,19 +1800,48 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
 
-[4 <./imagens/gear_mesh_spring.png> <./imagens/gear_repr.png>]
+[2{C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts
+1.enc}{C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx
+-ot1-tlf.enc}]
+<imagens/rotor1.PNG, id=123, 365.86688pt x 130.23656pt>
+File: imagens/rotor1.PNG Graphic file (type png)
+<use imagens/rotor1.PNG>
+Package pdftex.def Info: imagens/rotor1.PNG  used on input line 159.
+(pdftex.def)             Requested size: 241.84842pt x 86.09152pt.
+<imagens/rotor2.PNG, id=124, 347.79938pt x 122.70844pt>
+File: imagens/rotor2.PNG Graphic file (type png)
+<use imagens/rotor2.PNG>
+Package pdftex.def Info: imagens/rotor2.PNG  used on input line 165.
+(pdftex.def)             Requested size: 241.84842pt x 85.32611pt.
+<imagens/gear_mesh_spring.png, id=136, 732.48656pt x 346.29375pt>
+File: imagens/gear_mesh_spring.png Graphic file (type png)
+<use imagens/gear_mesh_spring.png>
+Package pdftex.def Info: imagens/gear_mesh_spring.png  used on input line 185.
+(pdftex.def)             Requested size: 386.95894pt x 182.943pt.
+<imagens/gear_repr.png, id=141, 310.91156pt x 201.75375pt>
+File: imagens/gear_repr.png Graphic file (type png)
+<use imagens/gear_repr.png>
+Package pdftex.def Info: imagens/gear_repr.png  used on input line 192.
+(pdftex.def)             Requested size: 290.22105pt x 188.32787pt.
 
-Package natbib Warning: Citation `kaplan_paper_2013' on page 5 undefined on inp
-ut line 199.
 
-<imagens/force_component.png, id=110, 592.46344pt x 201.00093pt>
+Package fancyhdr Warning: \headheight is too small (14.22636pt): 
+(fancyhdr)                Make it at least 18.23401pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.23401pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
+
+[3 <./imagens/rotor1.PNG> <./imagens/rotor2.PNG> <./imagens/gear_mesh_spring.pn
+g>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 233.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 233.
+<imagens/force_component.png, id=164, 592.46344pt x 201.00093pt>
 File: imagens/force_component.png Graphic file (type png)
 <use imagens/force_component.png>
-Package pdftex.def Info: imagens/force_component.png  used on input line 203.
-(pdftex.def)             Requested size: 409.71692pt x 139.00668pt.
-
-Package natbib Warning: Citation `kaplan_paper_2013' on page 5 undefined on inp
-ut line 208.
+Package pdftex.def Info: imagens/force_component.png  used on input line 276.
+(pdftex.def)             Requested size: 435.32419pt x 147.69249pt.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -1944,72 +1850,15 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
 
-[5 <./imagens/force_component.png>]
-! Undefined control sequence.
-\@cline ...nce \@multispan \@ne \UseTaggingSocket 
-                                                  {tbl/leaders/begin}{\CT@ar...
-l.261 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[4 <./imagens/gear_repr.png>] (EBDR2026.bbl
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
+17.
 
-! Undefined control sequence.
-\@cline ...rayrulewidth \hfill }\UseTaggingSocket 
-                                                  {tbl/leaders/end}\CT@tbl@g...
-l.261 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\@cline ...bl/leaders/end}\CT@tbl@gdecr@row@count 
-                                                  \cr \noalign {\vskip -\arr...
-l.261 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\@cline ...nce \@multispan \@ne \UseTaggingSocket 
-                                                  {tbl/leaders/begin}{\CT@ar...
-l.261 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\@cline ...rayrulewidth \hfill }\UseTaggingSocket 
-                                                  {tbl/leaders/end}\CT@tbl@g...
-l.261 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-\@cline ...bl/leaders/end}\CT@tbl@gdecr@row@count 
-                                                  \cr \noalign {\vskip -\arr...
-l.261 	}
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+(C:\Users\Murillo\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 10.0pt on input line 17.
 
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
@@ -2018,10 +1867,7 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
 
-[6]) (EBDR2026.bbl)
-
-Package natbib Warning: There were undefined citations.
-
+[5 <./imagens/force_component.png>])
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 18.23401pt, for example:
@@ -2029,40 +1875,38 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
 
-[7] (EBDR2026.aux)
+[6] (EBDR2026.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `EBDR2026.out' has not changed.
-(rerunfilecheck)             Checksum: CEB4CEFF744A5CABA227CDD9DFADA843;1740.
+(rerunfilecheck)             Checksum: 1CBB821775ACCE76FD97FC873C716DA6;1590.
  ) 
 Here is how much of TeX's memory you used:
- 48206 strings out of 474485
- 1085622 string characters out of 5742790
- 1962542 words of memory out of 5000000
- 69668 multiletter control sequences out of 15000+600000
- 600869 words of font info for 85 fonts, out of 8000000 for 9000
+ 47762 strings out of 474485
+ 1078740 string characters out of 5742790
+ 1964542 words of memory out of 5000000
+ 69234 multiletter control sequences out of 15000+600000
+ 615536 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,93p,727b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,93p,727b,1228s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewT
 XMI.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/type1/public/newt
 x/NewTXMI7.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/tex-gyre/qtmr.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/newtx/txexs.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/newtx/txmiaX.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/newtx/txsys.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKT
-eX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Murillo/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/Murillo/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/Murillo/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on EBDR2026.pdf (7 pages, 437223 bytes).
+1/public/txfonts/t1xtt.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/font
+s/type1/public/newtx/txexs.pfb><C:/Users/Murillo/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/newtx/txmiaX.pfb><C:/Users/Murillo/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/newtx/txsys.pfb><C:/Users/Murillo/AppData/Local/Program
+s/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Murillo/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/Murillo/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/Murillo/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/Murillo/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
+Output written on EBDR2026.pdf (6 pages, 500137 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 39 named destinations out of 1000 (max. 500000)
+ 147 words of extra memory for PDF output out of 10000 (max. 10000000)
 

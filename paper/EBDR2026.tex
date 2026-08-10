@@ -5,12 +5,11 @@
 
 \documentclass[10pt,fleqn,a4paper,twoside]{article}
 \usepackage{EBDR2026}
-\usepackage{colortbl}
 \usepackage{array}
 % babel removido para evitar option clash com o template
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
+%\usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
 \usepackage{setspace}
 \usepackage{indentfirst}
 \usepackage{fancyhdr}
@@ -29,14 +28,13 @@
 \usepackage{physics}
 \usepackage[brazilian,capitalize]{cleveref}
 \usepackage{textcomp}
-\usepackage[table]{xcolor} % Unificado aqui com a opção [table] para consertar o cellcolor
+\usepackage{xcolor}
 \usepackage{scalerel}
 \usepackage{eqparbox}
 \usepackage{longtable}
 \usepackage{makecell}
 \usepackage{threeparttable}
 \usepackage{calc}
-% \usepackage{array} removido pois estava duplicado
 \usepackage[locale=FR]{siunitx}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -45,129 +43,257 @@
 \usepackage{pdfpages}
 \usepackage{float}
 \usepackage{etoolbox}
-% \usepackage{nicematrix} removido pois causa erro de versão e não está sendo utilizado
 \usepackage{bibentry}
+
+% Comando alternativo para preencher o cronograma sem depender do \cellcolor (evita conflitos com o template)
+\newcommand{\gc}{\textcolor{lightgray}{\rule{6mm}{3mm}}}
 
 \def\shortauthor{P. Autor, S. Autor e T. Autor (atualize este cabeçalho conforme necessário)}
 \def\shorttitle{Título Curto do Artigo (Iniciais Maiúsculas, garantir que caiba em uma linha)}
 
 \begin{document}
-	%	\fphead
-	%	
-	%	% Cabeçalho corrigido com \parbox para evitar erros de compilação da coluna
-	%	\noindent\hspace*{-2.5mm}\begin{tabular}{||c}
-		%		\parbox{0.97\textwidth}{
-			%			\vspace{2mm}
-			%			{\centering \title{INSTRUÇÕES PARA FORMATAÇÃO DE ARTIGOS (VERSÕES PRELIMINAR E FINAL) DA EBDR 2026} \par} \vspace{4mm}
-			%			\authors{Nome do Primeiro Autor} \\
-			%			\authors{Nome do Segundo Autor} \\
-			%			\institution{Instituição e endereço para o primeiro e segundo autores - se forem os mesmos} \\
-			%			\institution{e-mails} \\
-			%			\\
-			%			\authors{Nome do Terceiro Autor} \\
-			%			\institution{Instituição e endereço para o terceiro autor} \\
-			%			\institution{e-mail} \\
-			%			\\
-			%			\authors{Mesmo formato para outros autores, se houver} \\
-			%			\\
-			%			\abstract{\textbf{Resumo.} O resumo deve descrever os objetivos, a metodologia e as principais conclusões do artigo em aproximadamente 200 palavras. Não deve conter fórmulas nem referências bibliográficas.}\\
-			%			\\
-			%			\keywords{\textbf{Palavras-chave:} palavra-chave 1, palavra-chave 2, palavra-chave 3\dots{} (até 5 palavras-chave)}\vspace{2mm}
-			%		}
-		%	\end{tabular}
-	%	
-	%	\section{INTRODUÇÃO}
-	%	
-	%	O objetivo destas instruções é servir como guia para a formatação de artigos a serem publicados nos Anais da 2ª Escola Brasileira de Dinâmica de Rotores (EBDR 2026).
-	%	
-	%	Os Anais da EBDR 2026 serão publicados em formato Adobe\texttrademark\space PDF.
-	%	
-	%	Os artigos {\bf DEVEM} ser formatados rigorosamente de acordo com estas instruções. O presente arquivo pode ser utilizado como modelo para usuários de \LaTeX\space. Também pode ser utilizado como guia de formatação para usuários de outros softwares de processamento de texto.
-	%	
-	%	Recomenda-se que o artigo tenha no máximo {\bf 4} páginas, incluindo tabelas e figuras.
-	%	
-	%	\section{FORMATAÇÃO DO TEXTO}
-	%	
-	%	Os manuscritos devem ser escritos em português, digitados em páginas no formato A4, utilizando fonte Times New Roman, tamanho 10, exceto para o título, afiliação dos autores, resumo e palavras-chave, para os quais instruções específicas de formatação são indicadas acima. Deve-se utilizar espaçamento simples entre linhas em todo o texto.
-	%	
-	%	O bloco de texto que contém o título, os nomes dos autores e suas afiliações, o resumo e as palavras-chave deve ser recuado em 0,1 cm a partir da margem esquerda e marcado por uma linha preta vertical à esquerda com espessura de 2 1/4 pt.
-	%	
-	%	A primeira página deve ter margem superior de 3 cm e as demais margens (esquerda, direita e inferior) devem ter 2 cm. Todas as demais páginas devem ter todas as margens iguais a 2 cm.
-	%	
-	%	AS PÁGINAS {\bf NÃO DEVEM} SER NUMERADAS
-	%	
-	%	O corpo do texto deve ser justificado. A primeira linha de cada parágrafo deve ter recuo de 0,5 cm. Informações suficientes devem ser fornecidas diretamente no texto ou por meio de referências a trabalhos amplamente disponíveis na literatura. Notas de rodapé devem ser evitadas.
-	%	
-	%	Todos os símbolos e notações devem ser definidos no texto. As grandezas físicas devem ser expressas no Sistema Internacional de Unidades (SI). Símbolos matemáticos que aparecem no texto devem ser escritos em itálico.
-	%	
-	%	As referências bibliográficas devem ser citadas no texto pelo sobrenome do(s) autor(es) e ano de publicação, de acordo com os seguintes exemplos: ``Em um trabalho recente~\citep{BandarraFilho2011}\dots'' ou ``Recentemente, \citet{BandarraFilho2011}\dots''. No caso de três ou mais autores, deve-se utilizar a forma ``\citep{CavaliniJunior2015}''. Duas ou mais referências com os mesmos autores e ano de publicação devem ser diferenciadas acrescentando ``a'', ``b'', etc., ao ano. Por exemplo: ``Nos trabalhos~\citep{Santos2013a} e \citep{Santos2013b}\dots''.
-	%	
-	%	Referências aceitáveis incluem artigos de periódicos~\citep{MLA04}, artigos numerados, dissertações e teses~\citep{CavaliniJunior2013,coelho2017}, anais de congressos publicados, preprints de conferências, livros~\citep{McConnell.Varoto.2008} e artigos submetidos (desde que o periódico seja identificado).
-	%	
-	%	As referências devem ser listadas ao final do artigo de acordo com as instruções fornecidas na Seção 4.
-	%	
-	%	\subsection{Títulos de seções e subseções}
-	%	
-	%	Os títulos de seções e subseções devem ser alinhados à esquerda, digitados em fonte Times New Roman, tamanho 10, em negrito. Devem ser numerados utilizando algarismos arábicos separados por pontos. Não devem ser utilizados mais do que 3 níveis de subseções. Deve-se incluir uma linha em branco acima e abaixo de cada título de seção/subseção.
-	%	
-	%	\subsection{Equações matemáticas}
-	%	
-	%	As equações matemáticas devem ser recuadas em 0,5 cm a partir da margem esquerda. Devem ser digitadas em fonte Times New Roman, itálico, tamanho 10 pt. Algarismos arábicos devem ser utilizados para numerar as equações, entre parênteses e alinhados à direita, conforme mostrado nos exemplos abaixo. As equações devem ser referenciadas como ``Eq.~(\ref{eq1})'' no meio de uma frase ou como ``Equação~(\ref{eq1})'' no início de uma frase. Quantidades matriciais e vetoriais podem ser indicadas por colchetes e chaves, como na Eq.~(\ref{eq1}), ou em negrito, como na Eq.~(\ref{eq2}). Os símbolos utilizados nas equações devem ser definidos imediatamente antes ou após sua primeira aparição.
-	%	
-	%	Deve-se incluir uma linha em branco acima e abaixo de cada equação.
-	%	\begin{equation}
-		%		[M]\{\ddot{x}\}+[C]\{\dot{x}(t)\}+[K]\{x(t)\}={f(t)} 
-		%		\label{eq1}
-		%	\end{equation}
-	%	\begin{equation}
-		%		\mathbf{M\ddot{x}}(t)+\mathbf{C\dot{x}}(t)+\mathbf{Kx}(t)=\mathbf{f}(t) 
-		%		\label{eq2}
-		%	\end{equation}
-	%	
-	%	\subsection{Figuras e Tabelas}
-	%	
-	%	Figuras e tabelas devem ser posicionadas no texto o mais próximo possível do ponto onde são mencionadas pela primeira vez e devem ser numeradas consecutivamente em algarismos arábicos. As figuras devem ser referenciadas como ``Fig.~\ref{fig1}'' no meio de uma frase ou como ``Figura~\ref{fig1}'' no início de uma frase. As figuras, bem como suas legendas, devem ser centralizadas na direção horizontal. As legendas das figuras não devem ultrapassar 3 linhas.
-	%	
-	%	A legenda dos símbolos dos dados, bem como os rótulos de cada curva, devem ser incluídos na figura. Os textos devem ter tamanho suficiente para facilitar a leitura. Todas as unidades devem ser expressas no Sistema Internacional (SI).
-	%	
-	%	Deve-se deixar uma linha em branco antes e depois de cada figura.
-	%	\begin{figure}[h!]
-		%		\centering
-		%		\includegraphics[width=150mm]{Figures/figure1.pdf}
-		%		\caption{Resposta do sistema quando submetido a uma força impulsiva.}
-		%		\label{fig1}
-		%	\end{figure}
-	%	
-	%	Figuras coloridas e fotografias de alta qualidade podem ser incluídas no artigo. Para reduzir o tamanho do arquivo e preservar a resolução gráfica, as figuras devem ser salvas em formato GIF (figuras com menos de 16 cores) ou JPEG (para maior densidade de cores) antes de serem inseridas no manuscrito.
-	%	
-	%	As tabelas devem ser referenciadas como ``Tab.~\ref{tab1}'' no meio de uma frase ou como ``Tabela~\ref{tab1}'' no início de uma frase. As tabelas, bem como seus títulos, devem ser centralizadas na direção horizontal. Os títulos das tabelas não devem ultrapassar 3 linhas. O estilo e tamanho da fonte utilizados nas tabelas devem ser semelhantes aos utilizados no corpo do texto. As unidades devem ser expressas no Sistema Internacional (SI). Explicações, se houver, devem ser apresentadas no rodapé das tabelas, e não dentro delas.
-	%	
-	%	Deve-se deixar uma linha em branco antes e depois de cada tabela.
-	%	
-	%	O estilo das bordas das tabelas é livre. Um exemplo é apresentado na Tab.~\ref{tab1}.
-	%\begin{table}[!h]
-	%	\centering
-	%	\caption{Resultados experimentais das propriedades de flexão dos compósitos CFRC-4HS e CFRC-TWILL. \protect\\Relação vão/profundidade = 35:1. Resultados médios de 7 espécimes.}
-	%	\begin{tabular}{|c|c|c|}
-		%		\hline
-		%		Propriedades do Compósito & CFRC-TWILL & CFRC-4HS\\
-		%		\hline
-		%		Resistência à flexão (MPa)$^{(1)}$ & 209$\pm$ 10 & 180 $\pm$  15\\
-		%		\hline
-		%		Módulo de flexão (GPa)$^{(1)}$ & 57.0 $\pm$ 2.8 & 18.0 $\pm$  1.3\\
-		%		\hline
-		%		Deflexão no meio do vão na tensão de falha (mm) & 2.15 $\pm$  1.90 & 6.40 $\pm$  0.25\\
-		%		\hline
-		%		\multicolumn{3}{l}{$^{(1)}$ medido a 25$^{\circ}$C} \\
-		%	\end{tabular}
-	%\end{table}
+	\fphead
 	
-	\newpage
-	\input{texto}
+	% Cabeçalho corrigido com \parbox para evitar erros de compilação
+	\noindent\hspace*{-2.5mm}\begin{tabular}{||c}
+		\parbox{0.97\textwidth}{
+			\vspace{2mm}
+			{\centering \title{INSTRUÇÕES PARA FORMATAÇÃO DE ARTIGOS (VERSÕES PRELIMINAR E FINAL) DA EBDR 2026} \par} \vspace{4mm}
+			\authors{Nome do Primeiro Autor} \\
+			\authors{Nome do Segundo Autor} \\
+			\institution{Instituição e endereço para o primeiro e segundo autores - se forem os mesmos} \\
+			\institution{e-mails} \\
+			\\
+			\authors{Nome do Terceiro Autor} \\
+			\institution{Instituição e endereço para o terceiro autor} \\
+			\institution{e-mail} \\
+			\\
+			\authors{Mesmo formato para outros autores, se houver} \\
+			\\
+			\abstract{\textbf{Resumo.} O resumo deve descrever os objetivos, a metodologia e as principais conclusões do artigo em aproximadamente 200 palavras. Não deve conter fórmulas nem referências bibliográficas.}\\
+			\\
+			\keywords{\textbf{Palavras-chave:} palavra-chave 1, palavra-chave 2, palavra-chave 3\dots{} (até 5 palavras-chave)}\vspace{2mm}
+		}
+	\end{tabular}
+	
+	\section{INTRODUÇÃO}
+	
+	Máquinas rotativas são equipamentos amplamente utilizados no ambiente industrial. São compostas por eixos, acoplamentos, mancais, selos, discos e engrenagens. Elas têm a função de transmitir a energia mecânica para diversos equipamentos, tais como turbo-máquinas, compressores, geradores, entre outros \citep{Friswell2010}.
+	
+	Dessa forma, para garantir a transmissão de movimentos entre máquinas e rotores, é comum a utilização de caixas de transmissão, como exemplificado pela Fig.~\ref{fig:gearbox}. Estas são compostas por eixos contendo engrenagens, que podem ser cilíndricas ou cônicas e de dentes retos ou helicoidais.
+	
+	Com isso em mente, o estudo do engrenamento e como ele influencia na dinâmica de rotação torna-se importante para o completo entendimento de uma máquina rotativa ou conjunto delas \citep{stringer2008}. Assim, para a compreensão deste fenômeno, diversos modelos matemáticos foram estabelecidos, começando por modelos simples que foram se tornando mais elaborados \citep{ozguven1988}.
+	
+	A complexidade do modelo está associada à geometria e aos parâmetros de projeto e montagem dos pares engrenados. O intuito dos modelos de engrenamento é determinar a rigidez associada ao par engrenado, que em associação com um modelo de dinâmica de rotação, fornecerá valores de amplitude de vibração, frequências naturais, entre outros valores importantes para o cuidado da máquina e identificação de possíveis falhas \citep{kaplan2012}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{imagens/gearbox.PNG}
+		\caption{Exemplo de Caixa de Transmissão \cite{lim1991}.}
+		\label{fig:gearbox}
+	\end{figure}
+	
+	\subsection{Objetivo}
+	Portanto, o presente trabalho visa elaborar uma metodologia de modelagem de pares engrenados que será implementada no pacote de código aberto de dinâmica de rotação \textit{Rotordynamic Open-Source Software} (ROSS) proposto por \citet{ross}.
+	
+	\subsubsection{Objetivos específicos}
+	
+	\begin{itemize}
+		\item Identificar modelos de rigidez de dentes de engrenagens;
+		\item Implementar metodologia para o acoplamento rotordinâmico de engrenagens;
+		\item Validação da metodologia proposta com base em resultados da literatura;
+		\item Adequar nova metodologia ao funcionamento do ROSS;
+		\item Utilização do algoritmo implementado em casos de rotores reais.
+	\end{itemize}
+	
+	\subsection{Justificativa}
+	
+	A partir da utilização de modelos de engrenamento fiéis à realidade, é possível incorporá-los à modelagem matemática e em método dos elementos finitos de rotores. Dessa maneira, com uma modelagem mais completa, fidedigna e robusta, é possível determinar amplitudes de vibração, frequências naturais, órbitas, resposta ao desbalanceamento ou outras solicitações, entre outros parâmetros. 
+	
+	A partir destes dados, é possível fazer um diagnóstico da operação da máquina rotativa que está sendo analisada. Dessa maneira, uma metodologia de modelagem de engrenamento torna-se um papel importante para a análise dinâmica de máquinas rotativas.
+	
+	\section{REVISÃO BIBLIOGRÁFICA}
+	
+	Neste capítulo são apresentados os conceitos fundamentais utilizados no desenvolvimento desta dissertação de mestrado. Esses conceitos incluem: a modelagem matemática da rigidez de acoplamento de um par de engrenagens e o equacionamento de rotores flexíveis, empregado na simulação e validação da implementação de engrenamento.
+	
+	\subsection{Modelo de rotores flexíveis}
+	
+	Um rotor flexível é um sistema dinâmico formado por discos, engrenagens, eixos flexíveis, mancais e selos. O modelo leva em consideração a geometria e as características de inércia, rigidez e amortecimento do sistema. Para obter a equação de movimento do rotor, os passos são: calcular a energia cinética e potencial dos componentes, escolher um método de discretização e aplicar as equações de Lagrange (Eq. \ref{eq_lalanne}) \citep{Lalanne1998}.
+	
+	\begin{equation}
+		\frac{\mathrm{d} }{\mathrm{d} t}\left ( \frac{\partial T}{\partial \dot{q_i}} \right )-\frac{\partial T}{\partial q_i} + \frac{\partial U}{\partial q_i}=F_{qi}
+		\label{eq_lalanne}
+	\end{equation}
+	
+	Onde $N$ é o número de graus de liberdade do sistema e o índice $i$ varia entre $1 \leq i \leq N$, $q_{i}$ são as coordenadas generalizadas, $F_{qi}$ são as forças generalizadas e $T$ e $U$ são as energias cinéticas e potenciais dos componentes, respectivamente.
+	
+	Para este modelo, algumas considerações feitas são:
+	\begin{itemize}
+		\item O disco é um elemento rígido, logo possui apenas energia cinética;
+		\item Engrenagens podem ser representadas como elementos de disco e estes são adicionados em nós;
+		\item O eixo é representado como um elemento de viga com seção circular constante e é caracterizado por energia cinética e potencial, onde cada elemento possui dois nós e seis graus de liberdade por nó;
+		\item Os mancais e selos podem ser representados por um conjunto de molas e amortecedores lineares.
+	\end{itemize}
+	
+	Assim, a equação diferencial que representa o comportamento dinâmico de um rotor é dada pela Eq. \ref{Eq:movement}.
+	
+	\begin{equation}
+		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+[K]\{q(t)\}=\{F(t)\}
+		\label{Eq:movement}
+	\end{equation}
+	
+	Onde $[M]$, $[C]$, $[G]$ e $[K]$ são as matrizes de massa, amortecimento, efeito giroscópico e rigidez, respectivamente, e $\{\ddot{q}(t)\}$, $\{\dot{q}(t)\}$, $\{q(t)\}$, e $\{F(t)\}$ são os vetores de aceleração, velocidade, deslocamento e força de entrada, respectivamente. A velocidade de rotação é representada por $\Omega$.
+	
+	O modelo ROSS, proposto por \citet{ross}, utiliza a formulação de seis graus de liberdade para cada nó, três de translação e três de rotação, conforme mostrado abaixo.
+	
+	\begin{equation}
+		\{q(t)\} = \{x,y,z, \theta_x, \theta_y, \theta_z\}^{T}
+		\label{Eq:dof}
+	\end{equation}
+	
+	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[t]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{imagens/rotor1.PNG}
+			\caption{Esquema de rotor}
+			\label{fig:rotor1}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[t]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{imagens/rotor2.PNG}
+			\caption{Representação do modelo}
+			\label{fig:rotor2}
+		\end{subfigure}
+		\caption{Esquema e modelo utilizado em dinâmica de rotação}
+		\label{fig:rotors}
+	\end{figure}
+	
+	\citet{jessica2025} Apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
+	
+	\subsection{Rigidez do Engrenamento}
+	
+	Para realizar o movimento conjunto entre os rotores motor e movido, é necessário acoplar as matrizes dos dois rotores nos graus de liberdade correspondentes dos nós correspondentes, representados por $q_i$ e $q_j$. Dessa maneira, a equação do movimento pode ser modificada para Eq.~\ref{Eq:mov-alt}, já contemplando a massa, rigidez e amortecimento dos dois rotores.
+	
+	A Fig.~\ref{fig:mesh_repr} representa esquematicamente o engrenamento, mostrando que a rigidez de acoplamento das engrenagens $K_{mesh}$ é na direção da linha de ação e não na linha que liga os centros das duas engrenagens. A matriz de acoplamento da rigidez $[K_{mesh}]$ pode ser escrita de acordo com Eq.~\ref{Eq:k_mesh} \citep{stringer2008}.
+	
+	A Fig.~\ref{fig:gear_repr} apresenta a representação do par engrenado em elementos finitos. As matrizes $K_{ii}$, $K_{ij}$, $K_{ji}$ e $K_{jj}$ são apresentadas na Eq.~\ref{eq:k_matrices} de acordo com \citet{stringer2008}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\linewidth]{imagens/gear_mesh_spring.png}
+		\caption{Reapresentação do Engrenamento \citep{kaplan2012}}
+		\label{fig:mesh_repr}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{imagens/gear_repr.png}
+		\caption{Representação do par engrenado em elementos finitos \citep{stringer2008}}
+		\label{fig:gear_repr}
+	\end{figure}
+	
+	\begin{equation}
+		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+([K] + [K_{mesh}])\{q(t)\}=\{F(t)\}
+		\label{Eq:mov-alt}
+	\end{equation}
+	
+	\begin{equation}
+		[K_{mesh}]
+		\begin{Bmatrix}
+			q_i \\
+			q_j
+		\end{Bmatrix}
+		= K_{g}
+		\begin{bmatrix}
+			[K_{ii}] & [K_{ij}] \\
+			[K_{ji}] & [K_{jj}]
+		\end{bmatrix}
+		\begin{Bmatrix}
+			q_i \\
+			q_j
+		\end{Bmatrix}
+		\label{Eq:k_mesh}
+	\end{equation}
+	
+	\begin{equation}
+		\label{eq:k_matrices}
+		\begin{gathered}
+			\resizebox{\linewidth}{!}{
+				$K_{ii} = 
+				\begin{bmatrix}
+					(s\varphi c\phi_x + c\varphi c\phi_y)^2 & & & & & \text{sym} \\
+					(s\varphi c\phi_x + c\varphi c\phi_y)(s\varphi c\phi_y - c\varphi c\phi_x) & (s\varphi c\phi_y - c\varphi c\phi_x)^2 & & & & \\
+					c\phi_z(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_z(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_z^2 & & & \\
+					s\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & s\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & s\varphi c\phi_z^2 r_i & (s\varphi c\phi_z r_i)^2 & & \\
+					-c\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & -c\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & -c\varphi c\phi_z^2 r_i & -c\varphi s\varphi(c\phi_z r_i)^2 & (c\varphi c\phi_z r_i)^2 & \\
+					-c\phi_x r_i(s\varphi c\phi_x + c\varphi c\phi_y) & -c\phi_x r_i(s\varphi c\phi_y - c\varphi c\phi_x) & -c\phi_x c\phi_z r_i & -s\varphi c\phi_x c\phi_z r_i^2 & c\varphi c\phi_x c\phi_z r_i^2 & (c\phi_x r_i)^2
+				\end{bmatrix}$
+			}
+			\\[1.5em]
+			\resizebox{\linewidth}{!}{
+				$K_{ji} = 
+				\begin{bmatrix}
+					-(s\varphi c\phi_x + c\varphi c\phi_y)^2 & [K_{ji}]_{2,1} & [K_{ji}]_{3,1} & -s\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & c\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_x r_i(s\varphi c\phi_x + c\varphi c\phi_y) \\
+					-(s\varphi c\phi_x + c\varphi c\phi_y)(s\varphi c\phi_y - c\varphi c\phi_x) & -(s\varphi c\phi_y - c\varphi c\phi_x)^2 & [K_{ji}]_{3,2} & -s\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & c\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_x r_i(s\varphi c\phi_y - c\varphi c\phi_x) \\
+					-c\phi_z(s\varphi c\phi_x + c\varphi c\phi_y) & -c\phi_z(s\varphi c\phi_y - c\varphi c\phi_x) & -c\phi_z^2 & -s\varphi c\phi_z^2 r_i & c\varphi c\phi_z^2 r_i & c\phi_x c\phi_z r_i \\
+					-s\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & -s\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & -s\varphi c\phi_z^2 r_j & -(s\varphi c\phi_z)^2 r_i r_j & c\varphi s\varphi c\phi_z^2 r_i r_j & s\varphi c\phi_x c\phi_z r_i r_j \\
+					c\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & c\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & c\varphi c\phi_z^2 r_j & c\varphi s\varphi c\phi_z^2 r_i r_j & -(c\varphi c\phi_z)^2 r_i r_j & -c\varphi c\phi_x c\phi_z r_i r_j \\
+					-c\phi_x r_j(s\varphi c\phi_x + c\varphi c\phi_y) & -c\phi_x r_j(s\varphi c\phi_y - c\varphi c\phi_x) & -c\phi_x c\phi_z r_j & -s\varphi c\phi_x c\phi_z r_i r_j & c\varphi c\phi_x c\phi_z r_i r_j & c\phi_x^2 r_i r_j
+				\end{bmatrix}$
+			}
+			\\[1.5em]
+			\resizebox{\linewidth}{!}{
+				$K_{jj} = 
+				\begin{bmatrix}
+					(s\varphi c\phi_x + c\varphi c\phi_y)^2 & & & & & \text{sym} \\
+					(s\varphi c\phi_x + c\varphi c\phi_y)(s\varphi c\phi_y - c\varphi c\phi_x) & (s\varphi c\phi_y - c\varphi c\phi_x)^2 & & & & \\
+					c\phi_z(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_z(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_z^2 & & & \\
+					s\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & s\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & s\varphi c\phi_z^2 r_j & (s\varphi c\phi_z r_j)^2 & & \\
+					-c\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & -c\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & -c\varphi c\phi_z^2 r_j & -c\varphi s\varphi(c\phi_z r_j)^2 & (c\varphi c\phi_z r_j)^2 & \\
+					c\phi_x r_j(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_x r_j(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_x c\phi_z r_j & s\varphi c\phi_x c\phi_z r_j^2 & -c\phi_x c\phi_z r_j^2 & (c\phi_x r_j)^2
+				\end{bmatrix}$
+			}
+		\end{gathered}
+	\end{equation}
+	
+	\begin{align*}
+		s\varphi &= \sin\varphi, & s\varphi^2 &= (\sin\varphi)^2 \\
+		c\varphi &= \cos\varphi, & c\varphi^2 &= (\cos\varphi)^2
+	\end{align*}
+	
+	\begin{align*}
+		\cos\phi_x &= \cos\beta \cos\alpha_n & \cos\phi_y &= \sin\alpha_n &   \cos\phi_z &= \sin\beta \sin\alpha_n
+	\end{align*}
+	
+	As variáveis $q$ indicam as coordenadas generalizadas, os índices $i$ e $j$ representam os índices dos nós onde as engrenagens estão posicionadas. O parâmetro $\varphi$ representa o ângulo de orientação entre as engrenagens, $\beta$ é o ângulo de hélice das engrenagens e $\alpha_n$ representa o ângulo de pressão normal do par engrenado.
+	
+	Os ângulos $\phi_x$, $\phi_y$ e $\phi_z$ são de acordo com a Fig.~\ref{fig:force_component}, que representa a decomposição das forças no ponto de contato das engrenagens \citep{kaplan_paper_2013}.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{imagens/force_component.png}
+		\caption{Decomposição das forças no ponto de contato das engrenagens.}
+		\label{fig:force_component}
+	\end{figure}
+	
+	O parâmetro $K_g$ representa a rigidez do par engrenado ao longo da linha de ação. \citet{kaplan_paper_2013} apresenta uma metodologia de cálculo com base em parâmetros geométricos e do material das engrenagens, apresentada na Eq.~\ref{Eq:Kg}. Neste caso, é assumida a hipótese de que a rigidez dos dentes é mais significativa do que a rigidez do corpo da engrenagem.
+	
+	\begin{equation}
+		K_g = \frac{c w E_1 E_2}{9(E_1+E_2)}
+		\label{Eq:Kg}
+	\end{equation}
+	
+	Onde $c$ representa a razão de contato do par engrenado, $w$ descreve a largura dos dentes das engrenagens, $E_1$ e $E_2$ são os módulos de elasticidade das engrenagens motriz e movida, respectivamente.
+	
+	\section{CRONOGRAMA DE EXECUÇÃO}
+
 	
 	\section{AGRADECIMENTOS}
 	Esta seção é opcional e deve ser posicionada antes da lista de referências.
-	\section{REFERÊNCIAS} 
+	
+	\section{REFERÊNCIAS}
 	
 	A lista de referências deve ser apresentada como uma nova seção, localizada ao final do artigo. A primeira linha de cada referência deve ser alinhada à esquerda. Todas as demais linhas devem ter recuo de 0,5 cm a partir da margem esquerda. Todas as referências incluídas na lista devem ter sido citadas no texto. As referências devem ser listadas em ordem alfabética, de acordo com o sobrenome do primeiro autor. Veja os exemplos a seguir:
 	
@@ -180,4 +306,5 @@
 	O seguinte texto, devidamente adaptado ao número de autores, deve ser incluído na última seção do artigo:
 	
 	O(s) autor(es) é (são) o(s) único(s) responsável(is) pelo conteúdo publicado neste artigo.
+	
 \end{document}
