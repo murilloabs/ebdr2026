@@ -1,0 +1,76 @@
+\begin{thebibliography}{9}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+
+\bibitem[{Friswell \emph{et~al.}(2010)Friswell, Penny, Garvey e
+  Lees}]{Friswell2010}
+Friswell, M.I., Penny, J.E., Garvey, S.D. e Lees, A.W., 2010.
+\newblock \emph{{Dynamics of rotating machines}}.
+\newblock Cambridge University Press, New York.
+\newblock ISBN 9780511780509.
+\newblock \urlprefix\url{https://doi.org/10.1017/CBO9780511780509}.
+
+\bibitem[{Kaplan \emph{et~al.}(2013)Kaplan, Dousti, Allaire, Nichols, Dimond e
+  Untaroiu}]{kaplan_paper_2013}
+Kaplan, J., Dousti, s., Allaire, P., Nichols, B., Dimond, T. e Untaroiu, A.,
+  2013.
+\newblock \enquote{Rotor dynamic modeling of gears and geared systems}.
+\newblock \emph{Proceedings of the ASME Turbo Expo}, Vol.~7.
+\newblock \doi{10.1115/GT2013-94654}.
+
+\bibitem[{Kaplan(2012)}]{kaplan2012}
+Kaplan, J.A., 2012.
+\newblock \emph{Gearbox Dynamics in the Modeling of Rotating Machinery}.
+\newblock Master of science thesis, University of Virginia, Charlottesville,
+  VA.
+
+\bibitem[{Lalanne e Ferraris(1998)}]{Lalanne1998}
+Lalanne, M. e Ferraris, G., 1998.
+\newblock \emph{Rotordynamics Prediction in Engineering.pdf}.
+\newblock Wiley.
+
+\bibitem[{Lim e Singh(1991)}]{lim1991}
+Lim, T. e Singh, R., 1991.
+\newblock \enquote{Vibration transmission through rolling element bearings.
+  part iii: Geared rotor system studies}.
+\newblock \emph{Journal of Sound and Vibration}, Vol. 151, No.~1, pp. 31--54.
+\newblock ISSN 0022-460X.
+\newblock \doi{https://doi.org/10.1016/0022-460X(91)90650-9}.
+\newblock
+  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/0022460X91906509}.
+
+\bibitem[{{\"O}zg{\"u}ven e Houser(1988)}]{ozguven1988}
+{\"O}zg{\"u}ven, H.N. e Houser, D.R., 1988.
+\newblock \enquote{Mathematical models used in gear dynamics--a review}.
+\newblock \emph{Journal of Sound and Vibration}, Vol. 121, No.~3, pp. 383--411.
+
+\bibitem[{Santos \emph{et~al.}(2025)Santos, da~Costa, Junior, Silva e
+  Ritto}]{jessica2025}
+Santos, J.G.d.F., da~Costa, V.T., Junior, A.A.C., Silva, R.T. e Ritto, T.G.,
+  2025.
+\newblock \enquote{An open-source software for rotordynamics}.
+\newblock In \emph{Proceedings of the XX International Symposium on Dynamic
+  Problems of Mechanics - DINAME 2025}.
+
+\bibitem[{Stringer(2008)}]{stringer2008}
+Stringer, D.B., 2008.
+\newblock \emph{Geared Rotor Dynamic Methodologies for Advancing Prognostic
+  Modeling Capabilities in Rotary-Wing Transmission Systems}.
+\newblock Dissertation, University of Virginia, Charlottesville, VA.
+
+\bibitem[{Timbó \emph{et~al.}(2020)Timbó, Martins, Bachmann, Rangel, Mota,
+  Valério e Ritto}]{ross}
+Timbó, R., Martins, R., Bachmann, G., Rangel, F., Mota, J., Valério, J. e
+  Ritto, T.G., 2020.
+\newblock \enquote{Ross - rotordynamic open source software}.
+\newblock \emph{Journal of Open Source Software}, Vol.~5, No.~48, p. 2120.
+\newblock \doi{10.21105/joss.02120}.
+\newblock \urlprefix\url{https://doi.org/10.21105/joss.02120}.
+
+\end{thebibliography}

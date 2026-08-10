@@ -9,7 +9,6 @@
 % babel removido para evitar option clash com o template
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%\usepackage[bottom=2cm,top=3cm,left=3cm,right=2cm]{geometry}
 \usepackage{setspace}
 \usepackage{indentfirst}
 \usepackage{fancyhdr}
@@ -48,8 +47,14 @@
 % Comando alternativo para preencher o cronograma sem depender do \cellcolor (evita conflitos com o template)
 \newcommand{\gc}{\textcolor{lightgray}{\rule{6mm}{3mm}}}
 
-\def\shortauthor{P. Autor, S. Autor e T. Autor (atualize este cabeçalho conforme necessário)}
-\def\shorttitle{Título Curto do Artigo (Iniciais Maiúsculas, garantir que caiba em uma linha)}
+% --- CORREÇÃO DO NEGRITO ---
+% Redefinindo os comandos do template para evitar o "vazamento" do negrito
+\renewcommand{\authors}[1]{{\bfseries #1}}
+\renewcommand{\institution}[1]{{\normalfont\small #1}}
+
+% Cabeçalho superior das páginas atualizado com seus dados
+\def\shortauthor{M. A. B. Sousa, A. A. Cavallini Jr. e V. Steffen Jr.}
+\def\shorttitle{Acoplamento Dinâmico de Rotores Engrenados}
 
 \begin{document}
 	\fphead
@@ -89,7 +94,7 @@
 		\caption{Exemplo de Caixa de Transmissão \cite{lim1991}.}
 		\label{fig:gearbox}
 	\end{figure}
-
+	
 	
 	\section{REVISÃO BIBLIOGRÁFICA}
 	
@@ -266,8 +271,7 @@
 	
 	Onde $c$ representa a razão de contato do par engrenado, $w$ descreve a largura dos dentes das engrenagens, $E_1$ e $E_2$ são os módulos de elasticidade das engrenagens motriz e movida, respectivamente.
 	
-	\section{CRONOGRAMA DE EXECUÇÃO}
-
+	\section{CRONOGRAMA DE EXECUÇÃO}	
 	
 	\section{AGRADECIMENTOS}
 	Esta seção é opcional e deve ser posicionada antes da lista de referências.
