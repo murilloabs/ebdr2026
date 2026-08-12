@@ -35,16 +35,6 @@ Lalanne, M. e Ferraris, G., 1998.
 \newblock \emph{Rotordynamics Prediction in Engineering.pdf}.
 \newblock Wiley.
 
-\bibitem[{Lim e Singh(1991)}]{lim1991}
-Lim, T. e Singh, R., 1991.
-\newblock \enquote{Vibration transmission through rolling element bearings.
-  part iii: Geared rotor system studies}.
-\newblock \emph{Journal of Sound and Vibration}, Vol. 151, No.~1, pp. 31--54.
-\newblock ISSN 0022-460X.
-\newblock \doi{https://doi.org/10.1016/0022-460X(91)90650-9}.
-\newblock
-  \urlprefix\url{https://www.sciencedirect.com/science/article/pii/0022460X91906509}.
-
 \bibitem[{{\"O}zg{\"u}ven e Houser(1988)}]{ozguven1988}
 {\"O}zg{\"u}ven, H.N. e Houser, D.R., 1988.
 \newblock \enquote{Mathematical models used in gear dynamics--a review}.
@@ -57,6 +47,15 @@ Santos, J.G.d.F., da~Costa, V.T., Junior, A.A.C., Silva, R.T. e Ritto, T.G.,
 \newblock \enquote{An open-source software for rotordynamics}.
 \newblock In \emph{Proceedings of the XX International Symposium on Dynamic
   Problems of Mechanics - DINAME 2025}.
+
+\bibitem[{Sousa(2026)}]{sousa2026}
+Sousa, M.{\'A}.B.d., 2026.
+\newblock \emph{Implementa{\c{c}}\~ao de modelo de folga de backlash
+  din{\^a}mico em engrenagens para an{\'a}lise de din{\^a}mica de
+  rota{\c{c}}\~ao}.
+\newblock Disserta{\c{c}}{\~a}o de mestrado, Universidade Federal de
+  Uberl{\^a}ndia, Uberl{\^a}ndia.
+\newblock \urlprefix\url{https://repositorio.ufu.br/handle/123456789/49301}.
 
 \bibitem[{Stringer(2008)}]{stringer2008}
 Stringer, D.B., 2008.

@@ -80,20 +80,15 @@
 	
 	\section{INTRODUÇÃO}
 	
-	Máquinas rotativas são equipamentos amplamente utilizados no ambiente industrial. São compostas por eixos, acoplamentos, mancais, selos, discos e engrenagens. Elas têm a função de transmitir a energia mecânica para diversos equipamentos, tais como turbo-máquinas, compressores, geradores, entre outros \citep{Friswell2010}.
+	Engrenagens têm a função de transmitir a energia mecânica de motores para diversos equipamentos, tais como turbo-máquinas, compressores, geradores através de caixas de transmissão \citep{sousa2026}. Estas são compostas por eixos contendo engrenagens, que podem ser cilíndricas ou cônicas e de dentes retos ou helicoidais.
+	
+	Máquinas rotativas são equipamentos amplamente utilizados no ambiente industrial. São compostas por eixos, acoplamentos, mancais, selos, discos e engrenagens. Elas têm a função de transmitir a energia mecânica para diversos equipamentos, tais como turbo-máquinas, compressores, geradores, entre outros \citep{Friswell2010} \citep{sousa2026}.
 	
 	Dessa forma, para garantir a transmissão de movimentos entre máquinas e rotores, é comum a utilização de caixas de transmissão, como exemplificado pela Fig.~\ref{fig:gearbox}. Estas são compostas por eixos contendo engrenagens, que podem ser cilíndricas ou cônicas e de dentes retos ou helicoidais.
 	
 	Com isso em mente, o estudo do engrenamento e como ele influencia na dinâmica de rotação torna-se importante para o completo entendimento de uma máquina rotativa ou conjunto delas \citep{stringer2008}. Assim, para a compreensão deste fenômeno, diversos modelos matemáticos foram estabelecidos, começando por modelos simples que foram se tornando mais elaborados \citep{ozguven1988}.
 	
 	A complexidade do modelo está associada à geometria e aos parâmetros de projeto e montagem dos pares engrenados. O intuito dos modelos de engrenamento é determinar a rigidez associada ao par engrenado, que em associação com um modelo de dinâmica de rotação, fornecerá valores de amplitude de vibração, frequências naturais, entre outros valores importantes para o cuidado da máquina e identificação de possíveis falhas \citep{kaplan2012}.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.5\linewidth]{imagens/gearbox.PNG}
-		\caption{Exemplo de Caixa de Transmissão \cite{lim1991}.}
-		\label{fig:gearbox}
-	\end{figure}
 	
 	
 	\section{REVISÃO BIBLIOGRÁFICA}
@@ -103,7 +98,6 @@
 	\subsection{Modelo de rotores flexíveis}
 	
 	Um rotor flexível é um sistema dinâmico formado por discos, engrenagens, eixos flexíveis, mancais e selos. O modelo leva em consideração a geometria e as características de inércia, rigidez e amortecimento do sistema. Para obter a equação de movimento do rotor, os passos são: calcular a energia cinética e potencial dos componentes, escolher um método de discretização e aplicar as equações de Lagrange (Eq. \ref{eq_lalanne}) \citep{Lalanne1998}.
-	
 	\begin{equation}
 		\frac{\mathrm{d} }{\mathrm{d} t}\left ( \frac{\partial T}{\partial \dot{q_i}} \right )-\frac{\partial T}{\partial q_i} + \frac{\partial U}{\partial q_i}=F_{qi}
 		\label{eq_lalanne}
@@ -120,7 +114,6 @@
 	\end{itemize}
 	
 	Assim, a equação diferencial que representa o comportamento dinâmico de um rotor é dada pela Eq. \ref{Eq:movement}.
-	
 	\begin{equation}
 		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+[K]\{q(t)\}=\{F(t)\}
 		\label{Eq:movement}
@@ -129,32 +122,30 @@
 	Onde $[M]$, $[C]$, $[G]$ e $[K]$ são as matrizes de massa, amortecimento, efeito giroscópico e rigidez, respectivamente, e $\{\ddot{q}(t)\}$, $\{\dot{q}(t)\}$, $\{q(t)\}$, e $\{F(t)\}$ são os vetores de aceleração, velocidade, deslocamento e força de entrada, respectivamente. A velocidade de rotação é representada por $\Omega$.
 	
 	O modelo ROSS, proposto por \citet{ross}, utiliza a formulação de seis graus de liberdade para cada nó, três de translação e três de rotação, conforme mostrado abaixo.
-	
 	\begin{equation}
 		\{q(t)\} = \{x,y,z, \theta_x, \theta_y, \theta_z\}^{T}
 		\label{Eq:dof}
 	\end{equation}
 	
 	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente.
+%	\begin{figure}[H]
+%		\centering
+%		\begin{subfigure}[t]{0.5\textwidth}
+%			\includegraphics[width=\textwidth]{imagens/rotor1.PNG}
+%			\caption{Esquema de rotor}
+%			\label{fig:rotor1}
+%		\end{subfigure}
+%		\hfill
+%		\begin{subfigure}[t]{0.5\textwidth}
+%			\includegraphics[width=\textwidth]{imagens/rotor2.PNG}
+%			\caption{Representação do modelo}
+%			\label{fig:rotor2}
+%		\end{subfigure}
+%		\caption{Esquema e modelo utilizado em dinâmica de rotação}
+%		\label{fig:rotors}
+%	\end{figure}
 	
-	\begin{figure}[H]
-		\centering
-		\begin{subfigure}[t]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{imagens/rotor1.PNG}
-			\caption{Esquema de rotor}
-			\label{fig:rotor1}
-		\end{subfigure}
-		\hfill
-		\begin{subfigure}[t]{0.5\textwidth}
-			\includegraphics[width=\textwidth]{imagens/rotor2.PNG}
-			\caption{Representação do modelo}
-			\label{fig:rotor2}
-		\end{subfigure}
-		\caption{Esquema e modelo utilizado em dinâmica de rotação}
-		\label{fig:rotors}
-	\end{figure}
-	
-	\citet{jessica2025} Apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
+	\citet{jessica2025} apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
 	
 	\subsection{Rigidez do Engrenamento}
 	
@@ -163,26 +154,49 @@
 	A Fig.~\ref{fig:mesh_repr} representa esquematicamente o engrenamento, mostrando que a rigidez de acoplamento das engrenagens $K_{mesh}$ é na direção da linha de ação e não na linha que liga os centros das duas engrenagens. A matriz de acoplamento da rigidez $[K_{mesh}]$ pode ser escrita de acordo com Eq.~\ref{Eq:k_mesh} \citep{stringer2008}.
 	
 	A Fig.~\ref{fig:gear_repr} apresenta a representação do par engrenado em elementos finitos. As matrizes $K_{ii}$, $K_{ij}$, $K_{ji}$ e $K_{jj}$ são apresentadas na Eq.~\ref{eq:k_matrices} de acordo com \citet{stringer2008}.
-	
+%	\begin{figure}
+%		\centering
+%		\caption{Exemplos e representações de caixas de engrenagem}
+%		\label{fig:caixas_engrenagem}
+%		
+%		\begin{minipage}{0.9\textwidth}
+%			\centering
+%			
+%			\begin{subfigure}{0.4\textwidth}
+%				\centering
+%				\caption{Exemplo esquemático}
+%				\label{fig:gearbox}
+%				\includegraphics[width=\linewidth]{imagens/gear_mesh_spring.png}
+%			\end{subfigure}
+%			\hfill
+%			\begin{subfigure}{0.45\textwidth}
+%				\centering
+%				\caption{Acoplada a motor e equipamento}
+%				\label{fig:gearbox2}
+%				\includegraphics[width=\linewidth]{imagens/gear_repr.png}
+%			\end{subfigure}
+%			
+%			\par\vspace{0.5em}
+%			\raggedright
+%			{\small Fonte: (a) \citeonline{lim1991}; (b) Gerado por IA.}
+%		\end{minipage}
+%	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\linewidth]{imagens/gear_mesh_spring.png}
 		\caption{Reapresentação do Engrenamento \citep{kaplan2012}}
 		\label{fig:mesh_repr}
 	\end{figure}
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.6\linewidth]{imagens/gear_repr.png}
-		\caption{Representação do par engrenado em elementos finitos \citep{stringer2008}}
-		\label{fig:gear_repr}
-	\end{figure}
-	
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[width=0.6\linewidth]{imagens/gear_repr.png}
+%		\caption{Representação do par engrenado em elementos finitos \citep{stringer2008}}
+%		\label{fig:gear_repr}
+%	\end{figure}
 	\begin{equation}
 		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+([K] + [K_{mesh}])\{q(t)\}=\{F(t)\}
 		\label{Eq:mov-alt}
 	\end{equation}
-	
 	\begin{equation}
 		[K_{mesh}]
 		\begin{Bmatrix}
@@ -200,7 +214,6 @@
 		\end{Bmatrix}
 		\label{Eq:k_mesh}
 	\end{equation}
-	
 	\begin{equation}
 		\label{eq:k_matrices}
 		\begin{gathered}
@@ -241,12 +254,10 @@
 			}
 		\end{gathered}
 	\end{equation}
-	
 	\begin{align*}
 		s\varphi &= \sin\varphi, & s\varphi^2 &= (\sin\varphi)^2 \\
 		c\varphi &= \cos\varphi, & c\varphi^2 &= (\cos\varphi)^2
 	\end{align*}
-	
 	\begin{align*}
 		\cos\phi_x &= \cos\beta \cos\alpha_n & \cos\phi_y &= \sin\alpha_n &   \cos\phi_z &= \sin\beta \sin\alpha_n
 	\end{align*}
@@ -254,7 +265,6 @@
 	As variáveis $q$ indicam as coordenadas generalizadas, os índices $i$ e $j$ representam os índices dos nós onde as engrenagens estão posicionadas. O parâmetro $\varphi$ representa o ângulo de orientação entre as engrenagens, $\beta$ é o ângulo de hélice das engrenagens e $\alpha_n$ representa o ângulo de pressão normal do par engrenado.
 	
 	Os ângulos $\phi_x$, $\phi_y$ e $\phi_z$ são de acordo com a Fig.~\ref{fig:force_component}, que representa a decomposição das forças no ponto de contato das engrenagens \citep{kaplan_paper_2013}.
-	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\linewidth]{imagens/force_component.png}
@@ -263,7 +273,6 @@
 	\end{figure}
 	
 	O parâmetro $K_g$ representa a rigidez do par engrenado ao longo da linha de ação. \citet{kaplan_paper_2013} apresenta uma metodologia de cálculo com base em parâmetros geométricos e do material das engrenagens, apresentada na Eq.~\ref{Eq:Kg}. Neste caso, é assumida a hipótese de que a rigidez dos dentes é mais significativa do que a rigidez do corpo da engrenagem.
-	
 	\begin{equation}
 		K_g = \frac{c w E_1 E_2}{9(E_1+E_2)}
 		\label{Eq:Kg}
