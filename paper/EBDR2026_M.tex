@@ -91,27 +91,27 @@
 	
 	\section{REVISÃO BIBLIOGRÁFICA}
 	
-	Neste capítulo são apresentados os conceitos fundamentais utilizados no desenvolvimento desta dissertação de mestrado. Esses conceitos incluem: a modelagem matemática da rigidez de acoplamento de um par de engrenagens e o equacionamento de rotores flexíveis, empregado na simulação e validação da implementação de engrenamento.
-	
+%	Neste capítulo são apresentados os conceitos fundamentais utilizados no desenvolvimento desta dissertação de mestrado. Esses conceitos incluem: a modelagem matemática da rigidez de acoplamento de um par de engrenagens e o equacionamento de rotores flexíveis, empregado na simulação e validação da implementação de engrenamento.
+%	
 	\subsection{Modelo de rotores flexíveis}
 	
-	Um rotor flexível é um sistema dinâmico formado por discos, engrenagens, eixos flexíveis, mancais e selos. O modelo leva em consideração a geometria e as características de inércia, rigidez e amortecimento do sistema. Para obter a equação de movimento do rotor, os passos são: calcular a energia cinética e potencial dos componentes, escolher um método de discretização e aplicar as equações de Lagrange (Eq. \ref{eq_lalanne}) \citep{Lalanne1998}.
+	Um rotor flexível é um sistema dinâmico formado por discos, engrenagens, eixos flexíveis, mancais e selos. O modelo leva em consideração a geometria e as características de inércia, rigidez e amortecimento do sistema. Para obter a equação de movimento do rotor, os passos são: calcular a energia cinética e potencial dos componentes, escolher um método de discretização e aplicar as equações de Lagrange (Eq \ref{eq_lalanne}) \citep{Lalanne1998}.
 	\begin{equation}
-		\frac{\mathrm{d} }{\mathrm{d} t}\left ( \frac{\partial T}{\partial \dot{q_i}} \right )-\frac{\partial T}{\partial q_i} + \frac{\partial U}{\partial q_i}=F_{qi}
+		\frac{\mathrm{d} }{\mathrm{d} t}\left ( \frac{\partial T}{\partial \dot{q_i}} \right )-\frac{\partial T}{\partial q_i} + \frac{\partial U}{\partial q_i}=Q_{qi}
 		\label{eq_lalanne}
 	\end{equation}
 	
-	Onde $N$ é o número de graus de liberdade do sistema e o índice $i$ varia entre $1 \leq i \leq N$, $q_{i}$ são as coordenadas generalizadas, $F_{qi}$ são as forças generalizadas e $T$ e $U$ são as energias cinéticas e potenciais dos componentes, respectivamente.
+	Onde $N$ é o número de graus de liberdade do sistema e o índice $i$ varia entre $1 \leq i \leq N$, $q_{i}$ são as coordenadas generalizadas, $Q_{qi}$ são as forças generalizadas e $T$ e $U$ são as energias cinéticas e potenciais dos componentes.
 	
-	Para este modelo, algumas considerações feitas são:
-	\begin{itemize}
-		\item O disco é um elemento rígido, logo possui apenas energia cinética;
-		\item Engrenagens podem ser representadas como elementos de disco e estes são adicionados em nós;
-		\item O eixo é representado como um elemento de viga com seção circular constante e é caracterizado por energia cinética e potencial, onde cada elemento possui dois nós e seis graus de liberdade por nó;
-		\item Os mancais e selos podem ser representados por um conjunto de molas e amortecedores lineares.
-	\end{itemize}
+%	Para este modelo, algumas considerações feitas são:
+%	\begin{itemize}
+%		\item O disco é um elemento rígido, logo possui apenas energia cinética;
+%		\item Engrenagens podem ser representadas como elementos de disco e estes são adicionados em nós;
+%		\item O eixo é representado como um elemento de viga com seção circular constante e é caracterizado por energia cinética e potencial, onde cada elemento possui dois nós e seis graus de liberdade por nó;
+%		\item Os mancais e selos podem ser representados por um conjunto de molas e amortecedores lineares.
+%	\end{itemize}
 	
-	Assim, a equação diferencial que representa o comportamento dinâmico de um rotor é dada pela Eq. \ref{Eq:movement}.
+	A equação diferencial que representa o comportamento dinâmico de um rotor é dada pela Eq. \ref{Eq:movement}.
 	\begin{equation}
 		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+[K]\{q(t)\}=\{F(t)\}
 		\label{Eq:movement}
@@ -125,7 +125,9 @@
 		\label{Eq:dof}
 	\end{equation}
 	
-	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente.
+	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente. Este é um dos softwares para  dinâmica de rotação com abrangência mundial assim como apresentado por \citet{jessica2025}.
+	
+	A engrenagens são adicionadas nos nós correspondentes de cada rotor.  O acoplamento entre os rotres engrenados necessida de uma rigidez associada ao engrenamento.
 %	\begin{figure}[H]
 %		\centering
 %		\begin{subfigure}[t]{0.5\textwidth}
@@ -143,8 +145,8 @@
 %		\label{fig:rotors}
 %	\end{figure}
 	
-	\citet{jessica2025} apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
-	
+%	\citet{jessica2025} apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
+%	
 	\subsection{Rigidez do Engrenamento}
 	
 	Para realizar o movimento conjunto entre os rotores motor e movido, é necessário acoplar as matrizes dos dois rotores nos graus de liberdade correspondentes dos nós correspondentes, representados por $q_i$ e $q_j$. Dessa maneira, a equação do movimento pode ser modificada para Eq.~\ref{Eq:mov-alt}, já contemplando a massa, rigidez e amortecimento dos dois rotores.

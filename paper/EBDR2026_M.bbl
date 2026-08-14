@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{8}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -35,11 +35,6 @@ Lalanne, M. e Ferraris, G., 1998.
 \newblock \emph{Rotordynamics Prediction in Engineering.pdf}.
 \newblock Wiley.
 
-\bibitem[{{\"O}zg{\"u}ven e Houser(1988)}]{ozguven1988}
-{\"O}zg{\"u}ven, H.N. e Houser, D.R., 1988.
-\newblock \enquote{Mathematical models used in gear dynamics--a review}.
-\newblock \emph{Journal of Sound and Vibration}, Vol. 121, No.~3, pp. 383--411.
-
 \bibitem[{Santos \emph{et~al.}(2025)Santos, da~Costa, Junior, Silva e
   Ritto}]{jessica2025}
 Santos, J.G.d.F., da~Costa, V.T., Junior, A.A.C., Silva, R.T. e Ritto, T.G.,
@@ -49,7 +44,7 @@ Santos, J.G.d.F., da~Costa, V.T., Junior, A.A.C., Silva, R.T. e Ritto, T.G.,
   Problems of Mechanics - DINAME 2025}.
 
 \bibitem[{Sousa(2026)}]{sousa2026}
-Sousa, M.{\'A}.B.d., 2026.
+Sousa, M.A.B.d., 2026.
 \newblock \emph{Implementa{\c{c}}\~ao de modelo de folga de backlash
   din{\^a}mico em engrenagens para an{\'a}lise de din{\^a}mica de
   rota{\c{c}}\~ao}.
