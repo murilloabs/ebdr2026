@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.23)  14 AUG 2026 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.23)  14 AUG 2026 17:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1604,7 +1604,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<Figures/logo_ebdr.pdf, id=38, 945.5325pt x 268.00125pt>
+<Figures/logo_ebdr.pdf, id=46, 945.5325pt x 268.00125pt>
 File: Figures/logo_ebdr.pdf Graphic file (type pdf)
 <use Figures/logo_ebdr.pdf>
 Package pdftex.def Info: Figures/logo_ebdr.pdf  used on input line 60.
@@ -1684,7 +1684,7 @@ LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
 
 pdfTeX warning: pdflatex.exe (file ./Figures/ABCM_Logo.pdf): PDF inclusion: fou
 nd PDF version <1.6>, but at most version <1.5> allowed
-<Figures/ABCM_Logo.pdf, id=39, 845.0471pt x 597.50829pt>
+<Figures/ABCM_Logo.pdf, id=47, 845.0471pt x 597.50829pt>
 File: Figures/ABCM_Logo.pdf Graphic file (type pdf)
 <use Figures/ABCM_Logo.pdf>
 Package pdftex.def Info: Figures/ABCM_Logo.pdf  used on input line 60.
@@ -1735,19 +1735,16 @@ a/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{C:/Users/M/AppData/Local/P
 rograms/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Users/M/AppData/Local/P
 rograms/MiKTeX/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./Figures/logo_ebdr.pdf>
  <./Figures/ABCM_Logo.pdf>]
-
-LaTeX Warning: Reference `fig:gear_repr' on page 2 undefined on input line 156.
-
-
-<imagens/gear_mesh_spring.png, id=99, 732.48656pt x 346.29375pt>
+<imagens/gear_mesh_spring.png, id=112, 732.48656pt x 346.29375pt>
 File: imagens/gear_mesh_spring.png Graphic file (type png)
 <use imagens/gear_mesh_spring.png>
-Package pdftex.def Info: imagens/gear_mesh_spring.png  used on input line 186.
+Package pdftex.def Info: imagens/gear_mesh_spring.png  used on input line 188.
 (pdftex.def)             Requested size: 386.95894pt x 182.943pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 230.
+(Font)              scaled to size 7.3pt on input line 232.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 230.
+(Font)              scaled to size 5.5pt on input line 232.
+
 
 Package fancyhdr Warning: \headheight is too small (14.22636pt): 
 (fancyhdr)                Make it at least 18.23401pt, for example:
@@ -1756,10 +1753,10 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.00764pt}.
 
 [2 <./imagens/gear_mesh_spring.png>]
-<imagens/force_component.png, id=119, 592.46344pt x 201.00093pt>
+<imagens/force_component.png, id=134, 592.46344pt x 201.00093pt>
 File: imagens/force_component.png Graphic file (type png)
 <use imagens/force_component.png>
-Package pdftex.def Info: imagens/force_component.png  used on input line 270.
+Package pdftex.def Info: imagens/force_component.png  used on input line 272.
 (pdftex.def)             Requested size: 435.32419pt x 147.69249pt.
  (EBDR2026_M.bbl
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
@@ -1791,21 +1788,17 @@ Package fancyhdr Warning: \headheight is too small (14.22636pt):
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `EBDR2026_M.out' has not changed.
-(rerunfilecheck)             Checksum: 764E49A9EAC3657EB0270955A3561033;1191.
+(rerunfilecheck)             Checksum: 6DF69D80C7FAD88C105B9B50568DA75D;1431.
  ) 
 Here is how much of TeX's memory you used:
- 47648 strings out of 474486
- 1072529 string characters out of 5745642
- 1964542 words of memory out of 5000000
- 69132 multiletter control sequences out of 15000+600000
+ 47655 strings out of 474486
+ 1072623 string characters out of 5745642
+ 1963542 words of memory out of 5000000
+ 69136 multiletter control sequences out of 15000+600000
  609436 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,93p,729b,1224s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,93p,729b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/M/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewTXMI.pf
 b><C:/Users/M/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/NewTXMI7.p
 fb><C:/Users/M/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.p
@@ -1817,9 +1810,9 @@ fb><C:/Users/M/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txexs.pfb
 ers/M/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/User
 s/M/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/M
 /AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on EBDR2026_M.pdf (4 pages, 357480 bytes).
+Output written on EBDR2026_M.pdf (4 pages, 360190 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 119 words of extra memory for PDF output out of 10000 (max. 10000000)
 

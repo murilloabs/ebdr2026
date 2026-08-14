@@ -127,7 +127,7 @@
 	
 	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente. Este é um dos softwares para  dinâmica de rotação com abrangência mundial assim como apresentado por \citet{jessica2025}.
 	
-	A engrenagens são adicionadas nos nós correspondentes de cada rotor.  O acoplamento entre os rotres engrenados necessida de uma rigidez associada ao engrenamento.
+	A engrenagens são adicionadas nos nós correspondentes de cada rotor. O acoplamento entre os rotores engrenados necessidade de uma rigidez associada ao engrenamento.
 %	\begin{figure}[H]
 %		\centering
 %		\begin{subfigure}[t]{0.5\textwidth}
@@ -147,13 +147,15 @@
 	
 %	\citet{jessica2025} apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
 %	
-	\subsection{Rigidez do Engrenamento}
+	\subsection{Acoplamento de rotores engrenados}
 	
-	Para realizar o movimento conjunto entre os rotores motor e movido, é necessário acoplar as matrizes dos dois rotores nos graus de liberdade correspondentes dos nós correspondentes, representados por $q_i$ e $q_j$. Dessa maneira, a equação do movimento pode ser modificada para Eq.~\ref{Eq:mov-alt}, já contemplando a massa, rigidez e amortecimento dos dois rotores.
+	A metodologia de acoplamento de rotores engrenado utilizada no \textit{Rotordynamic Open-Source Software} (ROSS) foi feita com base nos trabalhos de \citet{stringer2008, kaplan_paper_2013, kaplan2015}
+	
+	Para realizar o movimento conjunto entre os rotores motor e movido, é necessário acoplar as matrizes dos dois rotores nos graus de liberdade correspondentes dos nós de cada engrenagem ($i$ e $j$). Dessa maneira, a equação do movimento pode ser modificada para Eq.~\ref{Eq:mov-alt}, já contemplando a massa, rigidez e amortecimento dos dois rotores.
 	
 	A Fig.~\ref{fig:mesh_repr} representa esquematicamente o engrenamento, mostrando que a rigidez de acoplamento das engrenagens $K_{mesh}$ é na direção da linha de ação e não na linha que liga os centros das duas engrenagens. A matriz de acoplamento da rigidez $[K_{mesh}]$ pode ser escrita de acordo com Eq.~\ref{Eq:k_mesh} \citep{stringer2008}.
 	
-	A Fig.~\ref{fig:gear_repr} apresenta a representação do par engrenado em elementos finitos. As matrizes $K_{ii}$, $K_{ij}$, $K_{ji}$ e $K_{jj}$ são apresentadas na Eq.~\ref{eq:k_matrices} de acordo com \citet{stringer2008}.
+	As matrizes $K_{ii}$, $K_{ij}$, $K_{ji}$ e $K_{jj}$ são apresentadas na Eq.~\ref{eq:k_matrices} de acordo com \citet{stringer2008}.
 %	\begin{figure}
 %		\centering
 %		\caption{Exemplos e representações de caixas de engrenagem}
@@ -272,7 +274,7 @@
 		\label{fig:force_component}
 	\end{figure}
 	
-	O parâmetro $K_g$ representa a rigidez do par engrenado ao longo da linha de ação. \citet{kaplan_paper_2013} apresenta uma metodologia de cálculo com base em parâmetros geométricos e do material das engrenagens, apresentada na Eq.~\ref{Eq:Kg}. Neste caso, é assumida a hipótese de que a rigidez dos dentes é mais significativa do que a rigidez do corpo da engrenagem.
+	O parâmetro $K_g$ representa a rigidez do par engrenado ao longo da linha de ação. \citet{kaplan2015} apresenta uma metodologia de cálculo com base em parâmetros geométricos e do material das engrenagens, apresentada na Eq.~\ref{Eq:Kg}. Neste caso, é assumida a hipótese de que a rigidez dos dentes é mais significativa do que a rigidez do corpo da engrenagem.
 	\begin{equation}
 		K_g = \frac{c w E_1 E_2}{9(E_1+E_2)}
 		\label{Eq:Kg}
@@ -280,14 +282,20 @@
 	
 	Onde $c$ representa a razão de contato do par engrenado, $w$ descreve a largura dos dentes das engrenagens, $E_1$ e $E_2$ são os módulos de elasticidade das engrenagens motriz e movida, respectivamente.
 	
-	\section{CRONOGRAMA DE EXECUÇÃO}	
+
+	
+	\section{METODOLOGIA}
+	
+	\section{RESULTADOS E DISCUSSÃO}
+	
+	\section{CONCLUSÃO}	
 	
 	\section{AGRADECIMENTOS}
 	Esta seção é opcional e deve ser posicionada antes da lista de referências.
 	
 	\section{REFERÊNCIAS}
 	
-	A lista de referências deve ser apresentada como uma nova seção, localizada ao final do artigo. A primeira linha de cada referência deve ser alinhada à esquerda. Todas as demais linhas devem ter recuo de 0,5 cm a partir da margem esquerda. Todas as referências incluídas na lista devem ter sido citadas no texto. As referências devem ser listadas em ordem alfabética, de acordo com o sobrenome do primeiro autor. Veja os exemplos a seguir:
+%	A lista de referências deve ser apresentada como uma nova seção, localizada ao final do artigo. A primeira linha de cada referência deve ser alinhada à esquerda. Todas as demais linhas devem ter recuo de 0,5 cm a partir da margem esquerda. Todas as referências incluídas na lista devem ter sido citadas no texto. As referências devem ser listadas em ordem alfabética, de acordo com o sobrenome do primeiro autor. Veja os exemplos a seguir:
 	
 	\bibliographystyle{EBDR2026}
 	\renewcommand{\refname}{}

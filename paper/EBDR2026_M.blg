@@ -6,44 +6,46 @@ The style file: EBDR2026.bst
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: bibfile.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-You've used 8 entries,
+Warning--empty journal in kaplan2015
+You've used 9 entries,
             3271 wiz_defined-function locations,
-            719 strings with 6976 characters,
-and the built_in function-call counts, 4877 in all, are:
-= -- 360
-> -- 232
+            727 strings with 7307 characters,
+and the built_in function-call counts, 5517 in all, are:
+= -- 407
+> -- 266
 < -- 8
-+ -- 91
-- -- 81
-* -- 344
-:= -- 771
-add.period$ -- 30
-call.type$ -- 8
-change.case$ -- 67
-chr.to.int$ -- 8
-cite$ -- 8
-duplicate$ -- 385
-empty$ -- 352
-format.name$ -- 101
-if$ -- 943
++ -- 104
+- -- 93
+* -- 395
+:= -- 870
+add.period$ -- 34
+call.type$ -- 9
+change.case$ -- 77
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 436
+empty$ -- 394
+format.name$ -- 116
+if$ -- 1063
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 85
-newline$ -- 56
-num.names$ -- 32
-pop$ -- 190
+missing$ -- 97
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 220
 preamble$ -- 1
-purify$ -- 59
+purify$ -- 67
 quote$ -- 0
-skip$ -- 128
+skip$ -- 143
 stack$ -- 0
-substring$ -- 110
-swap$ -- 204
+substring$ -- 123
+swap$ -- 227
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
-warning$ -- 0
-while$ -- 26
+type$ -- 75
+warning$ -- 1
+while$ -- 29
 width$ -- 0
-write$ -- 125
+write$ -- 139
+(There was 1 warning)

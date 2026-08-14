@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -23,6 +23,14 @@ Kaplan, J., Dousti, s., Allaire, P., Nichols, B., Dimond, T. e Untaroiu, A.,
 \newblock \enquote{Rotor dynamic modeling of gears and geared systems}.
 \newblock \emph{Proceedings of the ASME Turbo Expo}, Vol.~7.
 \newblock \doi{10.1115/GT2013-94654}.
+
+\bibitem[{Kaplan \emph{et~al.}(2015)Kaplan, Fittro, Untaroiu e
+  Wood}]{kaplan2015}
+Kaplan, J.A., Fittro, R.L., Untaroiu, A. e Wood, H.G., 2015.
+\newblock \enquote{Non-linear time-transient rotor dynamic analyses of geared
+  systems}.
+\newblock \urlprefix\url{https://doi.org/10.1115/GT2015-43481}.
+\newblock Paper No: GT2015-43481.
 
 \bibitem[{Kaplan(2012)}]{kaplan2012}
 Kaplan, J.A., 2012.
