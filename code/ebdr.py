@@ -65,7 +65,7 @@ multi_rotor = rs.MultiRotor(
     driving_rotor=rotor1,
     driven_rotor=rotor2,
     coupled_nodes=(1, 1), 
-    orientation_angle=0.0 
+    orientation_angle=np.pi/2#0.0 
 )
 
 # ==========================================
