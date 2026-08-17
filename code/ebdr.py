@@ -66,7 +66,7 @@ multi_rotor = rs.MultiRotor(
     driving_rotor=rotor1,
     driven_rotor=rotor2,
     coupled_nodes=(1, 1), 
-    orientation_angle=np.pi/2#0.0 
+    orientation_angle=0.0 
 )
 
 # ==========================================
@@ -99,7 +99,6 @@ idx_g2_end   = idx_g2_start + 6
 dofs_gear1 = response.yout[:, idx_g1_start:idx_g1_end]
 dofs_gear2 = response.yout[:, idx_g2_start:idx_g2_end]
 
-# --- CORREÇÃO 1: Fatiando os arrays para pegar apenas o Regime Permanente (após 0.35s) ---
 mask_steady = time_array >= 0.35
 t_steady = time_array[mask_steady]
 dofs_gear1_steady = dofs_gear1[mask_steady, :]
@@ -116,18 +115,24 @@ fig.suptitle("Regime Permanente nos Graus de Liberdade - Acoplamento Helicoidal"
 
 for i, ax in enumerate(axs.flatten()):
     # Engrenagem 1 plotada no Eixo Y da Esquerda (Azul)
-    line1 = ax.plot(t_steady, dofs_gear1_steady[:, i], color='blue', label='Eng. 1 (Escala Esq.)')
+    line1 = ax.plot(t_steady, dofs_gear1_steady[:, i], color='blue', label='Engrenagem 1')
     ax.set_ylabel('Amp. Eng 1', color='blue', fontweight='bold')
     ax.tick_params(axis='y', labelcolor='blue')
     ax.grid(True)
     ax.set_title(labels[i])
     ax.set_xlabel('Tempo (s)')
     
-    # --- CORREÇÃO 2: Criação de Eixo Y Secundário para a Engrenagem 2 (Vermelho) ---
+    # FORÇAR NOTAÇÃO CIENTÍFICA NO EIXO Y PRINCIPAL
+    ax.ticklabel_format(axis='y', style='sci', scilimits=(0,0), useMathText=True)
+    
+    # Criação de Eixo Y Secundário para a Engrenagem 2 (Vermelho)
     ax2 = ax.twinx()
-    line2 = ax2.plot(t_steady, dofs_gear2_steady[:, i], color='red', alpha=0.8, label='Eng. 2 (Escala Dir.)')
+    line2 = ax2.plot(t_steady, dofs_gear2_steady[:, i], color='red', alpha=0.8, label='Engrenagem 2')
     ax2.set_ylabel('Amp. Eng 2', color='red', fontweight='bold')
     ax2.tick_params(axis='y', labelcolor='red')
+    
+    # FORÇAR NOTAÇÃO CIENTÍFICA NO EIXO Y SECUNDÁRIO
+    ax2.ticklabel_format(axis='y', style='sci', scilimits=(0,0), useMathText=True)
     
     # Juntando as legendas dos dois eixos para ficar num quadro só
     lines = line1 + line2

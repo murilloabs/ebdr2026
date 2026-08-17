@@ -43,6 +43,10 @@
 \usepackage{float}
 \usepackage{etoolbox}
 \usepackage{bibentry}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\raggedbottom % <--- COMANDO ADICIONADO PARA EVITAR O ESTICAMENTO DA PÁGINA
 
 % Comando alternativo para preencher o cronograma sem depender do \cellcolor (evita conflitos com o template)
 \newcommand{\gc}{\textcolor{lightgray}{\rule{6mm}{3mm}}}
@@ -84,15 +88,8 @@
 	
 	Nesse sentido, a modelagem de sistemas rotativos torna-se essencial para o estudo e aplicação destes equipamentos \citep{Friswell2010}. Com isso, a modelagem de engrenagens e o acoplamento de rotores é se torna de suma importância para o estudo completo e coerente de rotores engrenados e caixas de transmissão.
 	
-%	Com isso em mente, o estudo do engrenamento e como ele influencia na dinâmica de rotação torna-se importante para o completo entendimento de uma máquina rotativa ou conjunto delas \citep{stringer2008}. Assim, para a compreensão deste fenômeno, diversos modelos matemáticos foram estabelecidos, começando por modelos simples que foram se tornando mais elaborados \citep{ozguven1988}.
-%	
-%	A complexidade do modelo está associada à geometria e aos parâmetros de projeto e montagem dos pares engrenados. O intuito dos modelos de engrenamento é determinar a rigidez associada ao par engrenado, que em associação com um modelo de dinâmica de rotação, fornecerá valores de amplitude de vibração, frequências naturais, entre outros valores importantes para o cuidado da máquina e identificação de possíveis falhas \citep{kaplan2012}.
-	
-	
 	\section{REVISÃO BIBLIOGRÁFICA}
 	
-%	Neste capítulo são apresentados os conceitos fundamentais utilizados no desenvolvimento desta dissertação de mestrado. Esses conceitos incluem: a modelagem matemática da rigidez de acoplamento de um par de engrenagens e o equacionamento de rotores flexíveis, empregado na simulação e validação da implementação de engrenamento.
-%	
 	\subsection{Modelo de rotores flexíveis}
 	
 	Um rotor flexível é um sistema dinâmico formado por discos, engrenagens, eixos flexíveis, mancais e selos. O modelo leva em consideração a geometria e as características de inércia, rigidez e amortecimento do sistema. Para obter a equação de movimento do rotor, os passos são: calcular a energia cinética e potencial dos componentes, escolher um método de discretização e aplicar as equações de Lagrange (Eq \ref{eq_lalanne}) \citep{Lalanne1998}.
@@ -102,14 +99,6 @@
 	\end{equation}
 	
 	Onde $N$ é o número de graus de liberdade do sistema e o índice $i$ varia entre $1 \leq i \leq N$, $q_{i}$ são as coordenadas generalizadas, $Q_{qi}$ são as forças generalizadas e $T$ e $U$ são as energias cinéticas e potenciais dos componentes.
-	
-%	Para este modelo, algumas considerações feitas são:
-%	\begin{itemize}
-%		\item O disco é um elemento rígido, logo possui apenas energia cinética;
-%		\item Engrenagens podem ser representadas como elementos de disco e estes são adicionados em nós;
-%		\item O eixo é representado como um elemento de viga com seção circular constante e é caracterizado por energia cinética e potencial, onde cada elemento possui dois nós e seis graus de liberdade por nó;
-%		\item Os mancais e selos podem ser representados por um conjunto de molas e amortecedores lineares.
-%	\end{itemize}
 	
 	A equação diferencial que representa o comportamento dinâmico de um rotor é dada pela Eq. \ref{Eq:movement}.
 	\begin{equation}
@@ -128,25 +117,7 @@
 	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente. Este é um dos softwares para  dinâmica de rotação com abrangência mundial assim como apresentado por \citet{jessica2025}.
 	
 	A engrenagens são adicionadas nos nós correspondentes de cada rotor. O acoplamento entre os rotores engrenados necessidade de uma rigidez associada ao engrenamento.
-%	\begin{figure}[H]
-%		\centering
-%		\begin{subfigure}[t]{0.5\textwidth}
-%			\includegraphics[width=\textwidth]{imagens/rotor1.PNG}
-%			\caption{Esquema de rotor}
-%			\label{fig:rotor1}
-%		\end{subfigure}
-%		\hfill
-%		\begin{subfigure}[t]{0.5\textwidth}
-%			\includegraphics[width=\textwidth]{imagens/rotor2.PNG}
-%			\caption{Representação do modelo}
-%			\label{fig:rotor2}
-%		\end{subfigure}
-%		\caption{Esquema e modelo utilizado em dinâmica de rotação}
-%		\label{fig:rotors}
-%	\end{figure}
 	
-%	\citet{jessica2025} apresenta dados sobre a utilização mundial do pacote ROSS, juntamente com exemplos de utilização e resultados comparativos.
-%	
 	\subsection{Acoplamento de rotores engrenados}
 	
 	A metodologia de acoplamento de rotores engrenado utilizada no \textit{Rotordynamic Open-Source Software} (ROSS) foi feita com base nos trabalhos de \citet{stringer2008, kaplan_paper_2013, kaplan2015}
@@ -156,45 +127,12 @@
 	A Fig.~\ref{fig:mesh_repr} representa esquematicamente o engrenamento, mostrando que a rigidez de acoplamento das engrenagens $K_{mesh}$ é na direção da linha de ação e não na linha que liga os centros das duas engrenagens. A matriz de acoplamento da rigidez $[K_{mesh}]$ pode ser escrita de acordo com Eq.~\ref{Eq:k_mesh} \citep{stringer2008}.
 	
 	As matrizes $K_{ii}$, $K_{ij}$, $K_{ji}$ e $K_{jj}$ são apresentadas na Eq.~\ref{eq:k_matrices} de acordo com \citet{stringer2008}.
-%	\begin{figure}
-%		\centering
-%		\caption{Exemplos e representações de caixas de engrenagem}
-%		\label{fig:caixas_engrenagem}
-%		
-%		\begin{minipage}{0.9\textwidth}
-%			\centering
-%			
-%			\begin{subfigure}{0.4\textwidth}
-%				\centering
-%				\caption{Exemplo esquemático}
-%				\label{fig:gearbox}
-%				\includegraphics[width=\linewidth]{imagens/gear_mesh_spring.png}
-%			\end{subfigure}
-%			\hfill
-%			\begin{subfigure}{0.45\textwidth}
-%				\centering
-%				\caption{Acoplada a motor e equipamento}
-%				\label{fig:gearbox2}
-%				\includegraphics[width=\linewidth]{imagens/gear_repr.png}
-%			\end{subfigure}
-%			
-%			\par\vspace{0.5em}
-%			\raggedright
-%			{\small Fonte: (a) \citeonline{lim1991}; (b) Gerado por IA.}
-%		\end{minipage}
-%	\end{figure}
-	\begin{figure}[H]
+	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
 		\centering
 		\includegraphics[width=0.8\linewidth]{imagens/gear_mesh_spring.png}
 		\caption{Reapresentação do Engrenamento \citep{kaplan2012}}
 		\label{fig:mesh_repr}
 	\end{figure}
-%	\begin{figure}[H]
-%		\centering
-%		\includegraphics[width=0.6\linewidth]{imagens/gear_repr.png}
-%		\caption{Representação do par engrenado em elementos finitos \citep{stringer2008}}
-%		\label{fig:gear_repr}
-%	\end{figure}
 	\begin{equation}
 		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+([K] + [K_{mesh}])\{q(t)\}=\{F(t)\}
 		\label{Eq:mov-alt}
@@ -256,18 +194,20 @@
 			}
 		\end{gathered}
 	\end{equation}
-	\begin{align*}
-		s\varphi &= \sin\varphi, & s\varphi^2 &= (\sin\varphi)^2 \\
-		c\varphi &= \cos\varphi, & c\varphi^2 &= (\cos\varphi)^2
-	\end{align*}
-	\begin{align*}
-		\cos\phi_x &= \cos\beta \cos\alpha_n & \cos\phi_y &= \sin\alpha_n &   \cos\phi_z &= \sin\beta \sin\alpha_n
-	\end{align*}
+	\begin{gather*}
+		\begin{alignedat}{2}
+			s\varphi &= \sin\varphi, &\qquad s\varphi^2 &= (\sin\varphi)^2 \\
+			c\varphi &= \cos\varphi, &\qquad c\varphi^2 &= (\cos\varphi)^2
+		\end{alignedat} \\[1ex] 
+		\begin{alignedat}{3}
+			\cos\phi_x &= \cos\beta \cos\alpha_n &\qquad \cos\phi_y &= \sin\alpha_n &\qquad \cos\phi_z &= \sin\beta \sin\alpha_n
+		\end{alignedat}
+	\end{gather*}
 	
 	As variáveis $q$ indicam as coordenadas generalizadas, os índices $i$ e $j$ representam os índices dos nós onde as engrenagens estão posicionadas. O parâmetro $\varphi$ representa o ângulo de orientação entre as engrenagens, $\beta$ é o ângulo de hélice das engrenagens e $\alpha_n$ representa o ângulo de pressão normal do par engrenado.
 	
 	Os ângulos $\phi_x$, $\phi_y$ e $\phi_z$ são de acordo com a Fig.~\ref{fig:force_component}, que representa a decomposição das forças no ponto de contato das engrenagens \citep{kaplan_paper_2013}.
-	\begin{figure}[H]
+	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
 		\centering
 		\includegraphics[width=0.9\linewidth]{imagens/force_component.png}
 		\caption{Decomposição das forças no ponto de contato das engrenagens.}
@@ -282,11 +222,59 @@
 	
 	Onde $c$ representa a razão de contato do par engrenado, $w$ descreve a largura dos dentes das engrenagens, $E_1$ e $E_2$ são os módulos de elasticidade das engrenagens motriz e movida, respectivamente.
 	
-
-	
 	\section{METODOLOGIA}
 	
+	\begin{table}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
+		\centering
+		\caption{Resumo dos Parâmetros Físicos e de Simulação do Sistema MultiRotor}
+		\label{tab:parametros_multirotor}
+		\renewcommand{\arraystretch}{1.2} % Aumenta o espaçamento entre as linhas para melhor leitura
+		\begin{tabular}{@{}llcc@{}}
+			\toprule
+			\textbf{Subsistema} & \textbf{Parâmetro} & \textbf{Rotor 1 (Motriz)} & \textbf{Rotor 2 (Movido)} \\ \midrule
+			
+			\multirow{4}{*}{\textbf{Eixos}} 
+			& Material & \multicolumn{2}{c}{Aço (Padrão ROSS)} \\
+			& Comprimento Total & 0,5 m & 0,5 m \\
+			& Diâmetro Externo & 0,05 m & 0,05 m \\
+			& Diâmetro Interno & 0,0 m (Maciço) & 0,0 m (Maciço) \\ \midrule
+			
+			\multirow{6}{*}{\textbf{Engrenagens}} 
+			& Nó de Posicionamento & Nó 1 & Nó 1 \\
+			& Número de Dentes ($Z$) & 30 & 60 \\
+			& Diâmetro Primitivo ($d_p$) & 0,15 m & 0,30 m \\
+			& Largura do Dente ($b$) & 0,04 m & 0,04 m \\
+			& Ângulo de Pressão ($\alpha$) & \multicolumn{2}{c}{$20^\circ$} \\
+			& Ângulo de Hélice ($\beta$) & \multicolumn{2}{c}{$25^\circ$} \\ \midrule
+			
+			\multirow{2}{*}{\textbf{Mancais}} 
+			& Rigidez ($K_{xx}, K_{yy}, K_{zz}$) & \multicolumn{2}{c}{$10^7, 1.5 \times 10^7, 10^7$ N/m} \\
+			& Amortecimento ($C_{xx}, C_{yy}, C_{zz}$) & \multicolumn{2}{c}{$500, 800, 500$ N.s/m} \\ \midrule
+			
+			\multirow{2}{*}{\textbf{MultiRotor}} 
+			& Nós Acoplados & \multicolumn{2}{c}{Nó 1 (Rotor 1) $\leftrightarrow$ Nó 1 (Rotor 2)} \\
+			& Ângulo de Orientação & \multicolumn{2}{c}{$0,0$ rad (Alinhamento Horizontal)} \\ \midrule
+			
+			\multirow{2}{*}{\textbf{Desbalanceamento}} 
+			& Magnitude & 0,005 kg.m & - \\
+			& Local de Aplicação & Engrenagem 1 & - \\ \midrule
+			
+			\multirow{3}{*}{\textbf{Simulação}} 
+			& Rotação de Operação & \multicolumn{2}{c}{300 rad/s ($\sim$ 2865 RPM no Rotor 1)} \\
+			& Tempo Total & \multicolumn{2}{c}{0,5 s} \\
+			& Pontos Discretizados & \multicolumn{2}{c}{1000 passos} \\ 
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
 	\section{RESULTADOS E DISCUSSÃO}
+	
+	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
+		\centering
+		\includegraphics[width=\linewidth]{imagens/response.png}
+		\caption{Resposta}
+		\label{fig:response}
+	\end{figure}
 	
 	\section{CONCLUSÃO}	
 	
@@ -295,7 +283,7 @@
 	
 	\section{REFERÊNCIAS}
 	
-%	A lista de referências deve ser apresentada como uma nova seção, localizada ao final do artigo. A primeira linha de cada referência deve ser alinhada à esquerda. Todas as demais linhas devem ter recuo de 0,5 cm a partir da margem esquerda. Todas as referências incluídas na lista devem ter sido citadas no texto. As referências devem ser listadas em ordem alfabética, de acordo com o sobrenome do primeiro autor. Veja os exemplos a seguir:
+	%	A lista de referências deve ser apresentada como uma nova seção, localizada ao final do artigo. A primeira linha de cada referência deve ser alinhada à esquerda. Todas as demais linhas devem ter recuo de 0,5 cm a partir da margem esquerda. Todas as referências incluídas na lista devem ter sido citadas no texto. As referências devem ser listadas em ordem alfabética, de acordo com o sobrenome do primeiro autor. Veja os exemplos a seguir:
 	
 	\bibliographystyle{EBDR2026}
 	\renewcommand{\refname}{}
