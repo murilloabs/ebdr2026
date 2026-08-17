@@ -1,0 +1,312 @@
+%% LaTeX .tex
+%% Template para a 2ª Escola Brasileira de Dinâmica de Rotores
+%% EBDR 2026
+%% 17-18 de setembro de 2026, Uberlândia
+
+\documentclass[10pt,fleqn,a4paper,twoside]{article}
+\usepackage{EBDR2026}
+\usepackage{array}
+% babel removido para evitar option clash com o template
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{titlefoot}
+\usepackage{tocloft}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[bottom,stable]{footmisc}
+\usepackage[hidelinks,pdfstartview=FitH]{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow,multicol}
+\usepackage[fleqn]{amsmath}
+\usepackage{newtxtext,newtxmath}
+\usepackage{physics}
+\usepackage[brazilian,capitalize]{cleveref}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{scalerel}
+\usepackage{eqparbox}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{threeparttable}
+\usepackage{calc}
+\usepackage[locale=FR]{siunitx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{rotating}
+\usepackage{empheq}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{etoolbox}
+\usepackage{bibentry}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\raggedbottom % <--- COMANDO ADICIONADO PARA EVITAR O ESTICAMENTO DA PÁGINA
+
+% Comando alternativo para preencher o cronograma sem depender do \cellcolor (evita conflitos com o template)
+\newcommand{\gc}{\textcolor{lightgray}{\rule{6mm}{3mm}}}
+
+% --- CORREÇÃO DO NEGRITO ---
+% Redefinindo os comandos do template para evitar o "vazamento" do negrito
+\renewcommand{\authors}[1]{{\bfseries #1}}
+\renewcommand{\institution}[1]{{\normalfont\small #1}}
+
+% Cabeçalho superior das páginas atualizado com seus dados
+\def\shortauthor{M. A. B. Sousa, A. A. Cavallini Jr. e V. Steffen Jr.}
+\def\shorttitle{Acoplamento Dinâmico de Rotores Engrenados}
+
+\begin{document}
+	\fphead
+	
+	% Cabeçalho corrigido com \parbox para evitar erros de compilação
+	\noindent\hspace*{-2.5mm}\begin{tabular}{||c}
+		\parbox{0.97\textwidth}{
+			\vspace{2mm}
+			{\centering \title{Acoplamento Dinâmico de Rotores Engrenados} \par} \vspace{4mm}
+			\authors{Murilo Alvaro Borges de Sousa} \\
+			\authors{Aldemir Aparecido Cavallini Jr.} \\
+			\authors{Valder Steffen Jr.} \\
+			\institution{Universidade Federal de Uberlândia - UFU} \\
+			\institution{murilloabs@ufu.br; aacjunior@ufu.br; vsteffen@ufu.br}\\
+			\\
+			\abstract{\textbf{Resumo.} O presente trabalho apresenta uma metodologia matricial para a modelagem e simulação do acoplamento dinâmico de rotores engrenados, utilizando o método de elementos finitos. Sistemas de transmissão por engrenagens são essenciais na indústria, e compreender sua dinâmica é fundamental para evitar falhas. A metodologia foi implementada com base no \textit{Rotordynamic Open-Source Software} (ROSS), adotando nós com seis graus de liberdade para capturar os efeitos translacionais, rotacionais e de torção. A matriz de rigidez de engrenamento é formulada considerando os parâmetros geométricos do par helicoidal. Para validar a modelagem, simulou-se um sistema composto por dois rotores (motriz e movido) interligados por engrenagens helicoidais sujeitos a um desbalanceamento no rotor motriz. Os resultados no domínio do tempo comprovaram o acoplamento efetivo entre as direções flexionais, axiais e torcionais, característico do perfil helicoidal. Conclui-se que a abordagem computacional é consistente e capaz de prever o comportamento vibratório acoplado, viabilizando análises robustas de caixas de transmissão.}\\
+			\\
+			\textbf{Palavras-chave:} Dinâmica de Rotores, Engrenagens Helicoidais, Método de Elementos Finitos, Acoplamento Dinâmico, ROSS \vspace{2mm}
+		}
+	\end{tabular}
+	
+	\section{INTRODUÇÃO}
+	
+	Engrenagens têm a função de transmitir a energia mecânica de motores para diversos equipamentos, tais como turbo-máquinas, compressores, geradores através de caixas de transmissão \citep{sousa2026}. Estas são compostas por eixos contendo engrenagens, que podem ser cilíndricas ou cônicas e de dentes retos ou helicoidais. 
+	
+	Nesse sentido, a modelagem de sistemas rotativos torna-se essencial para o estudo e aplicação destes equipamentos \citep{Friswell2010}. Com isso, a modelagem de engrenagens e o acoplamento de rotores se torna de suma importância para o estudo completo e coerente de rotores engrenados e caixas de transmissão.
+	
+	\section{REVISÃO BIBLIOGRÁFICA}
+	
+	\subsection{Modelo de rotores flexíveis}
+	
+	Um rotor flexível é um sistema dinâmico formado por discos, engrenagens, eixos flexíveis, mancais e selos. O modelo leva em consideração a geometria e as características de inércia, rigidez e amortecimento do sistema. Para obter a equação de movimento do rotor, os passos são: calcular a energia cinética e potencial dos componentes, escolher um método de discretização e aplicar as equações de Lagrange (Eq \ref{eq_lalanne}) \citep{Lalanne1998}.
+	\begin{equation}
+		\frac{\mathrm{d} }{\mathrm{d} t}\left ( \frac{\partial T}{\partial \dot{q_i}} \right )-\frac{\partial T}{\partial q_i} + \frac{\partial U}{\partial q_i}=Q_{qi}
+		\label{eq_lalanne}
+	\end{equation}
+	
+	Onde $N$ é o número de graus de liberdade do sistema e o índice $i$ varia entre $1 \leq i \leq N$, $q_{i}$ são as coordenadas generalizadas, $Q_{qi}$ são as forças generalizadas e $T$ e $U$ são as energias cinéticas e potenciais dos componentes.
+	
+	A equação diferencial que representa o comportamento dinâmico de um rotor é dada pela Eq. \ref{Eq:movement}.
+	\begin{equation}
+		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+[K]\{q(t)\}=\{F(t)\}
+		\label{Eq:movement}
+	\end{equation}
+	
+	Onde $[M]$, $[C]$, $[G]$ e $[K]$ são as matrizes de massa, amortecimento, efeito giroscópico e rigidez, respectivamente, e $\{\ddot{q}(t)\}$, $\{\dot{q}(t)\}$, $\{q(t)\}$, e $\{F(t)\}$ são os vetores de aceleração, velocidade, deslocamento e força de entrada, respectivamente. A velocidade de rotação é representada por $\Omega$.
+	
+	O modelo ROSS, proposto por \citet{ross}, utiliza a formulação de seis graus de liberdade para cada nó, três de translação e três de rotação, conforme mostrado abaixo.
+	\begin{equation}
+		\{q(t)\} = \{x,y,z, \theta_x, \theta_y, \theta_z\}^{T}
+		\label{Eq:dof}
+	\end{equation}
+	
+	Onde $x$, $y$ e $z$ correspondem às translações horizontal, vertical e axial, respectivamente. As variáveis $\theta_x$, $\theta_y$ e $\theta_z$ representam a flexão no plano $yz$, a flexão no plano $xz$ e a torção, respectivamente. Este é um dos softwares para  dinâmica de rotação com abrangência mundial assim como apresentado por \citet{jessica2025}.
+	
+	A engrenagens são adicionadas nos nós correspondentes de cada rotor. O acoplamento entre os rotores engrenados necessidade de uma rigidez associada ao engrenamento.
+	
+	\subsection{Acoplamento de rotores engrenados}
+	
+	A metodologia de acoplamento de rotores engrenado utilizada no \textit{Rotordynamic Open-Source Software} (ROSS) foi feita com base nos trabalhos de \citet{stringer2008, kaplan_paper_2013, kaplan2015}
+	
+	Para realizar o movimento conjunto entre os rotores motor e movido, é necessário acoplar as matrizes dos dois rotores nos graus de liberdade correspondentes dos nós de cada engrenagem ($i$ e $j$). Dessa maneira, a equação do movimento pode ser modificada para Eq.~\ref{Eq:mov-alt}, já contemplando a massa, rigidez e amortecimento dos dois rotores.
+	
+	A Fig.~\ref{fig:mesh_repr} representa esquematicamente o engrenamento, mostrando que a rigidez de acoplamento das engrenagens $K_{mesh}$ é na direção da linha de ação e não na linha que liga os centros das duas engrenagens. A matriz de acoplamento da rigidez $[K_{mesh}]$ pode ser escrita de acordo com Eq.~\ref{Eq:k_mesh} \citep{stringer2008}.
+	
+	As matrizes $K_{ii}$, $K_{ij}$, $K_{ji}$ e $K_{jj}$ são apresentadas na Eq.~\ref{eq:k_matrices} de acordo com \citet{stringer2008}.
+	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
+		\centering
+		\includegraphics[width=0.8\linewidth]{imagens/gear_mesh_spring.png}
+		\caption{Reapresentação do Engrenamento \citep{kaplan2012}}
+		\label{fig:mesh_repr}
+	\end{figure}
+	\begin{equation}
+		[M]\{\ddot{q}(t)\}+([C]+\Omega [G])\{\dot{q}(t)\}+([K] + [K_{mesh}])\{q(t)\}=\{F(t)\}
+		\label{Eq:mov-alt}
+	\end{equation}
+	\begin{equation}
+		[K_{mesh}]
+		\begin{Bmatrix}
+			q_i \\
+			q_j
+		\end{Bmatrix}
+		= K_{g}
+		\begin{bmatrix}
+			[K_{ii}] & [K_{ij}] \\
+			[K_{ji}] & [K_{jj}]
+		\end{bmatrix}
+		\begin{Bmatrix}
+			q_i \\
+			q_j
+		\end{Bmatrix}
+		\label{Eq:k_mesh}
+	\end{equation}
+	\begin{equation}
+		\label{eq:k_matrices}
+		\begin{gathered}
+			\resizebox{\linewidth}{!}{
+				$K_{ii} = 
+				\begin{bmatrix}
+					(s\varphi c\phi_x + c\varphi c\phi_y)^2 & & & & & \text{sym} \\
+					(s\varphi c\phi_x + c\varphi c\phi_y)(s\varphi c\phi_y - c\varphi c\phi_x) & (s\varphi c\phi_y - c\varphi c\phi_x)^2 & & & & \\
+					c\phi_z(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_z(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_z^2 & & & \\
+					s\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & s\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & s\varphi c\phi_z^2 r_i & (s\varphi c\phi_z r_i)^2 & & \\
+					-c\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & -c\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & -c\varphi c\phi_z^2 r_i & -c\varphi s\varphi(c\phi_z r_i)^2 & (c\varphi c\phi_z r_i)^2 & \\
+					-c\phi_x r_i(s\varphi c\phi_x + c\varphi c\phi_y) & -c\phi_x r_i(s\varphi c\phi_y - c\varphi c\phi_x) & -c\phi_x c\phi_z r_i & -s\varphi c\phi_x c\phi_z r_i^2 & c\varphi c\phi_x c\phi_z r_i^2 & (c\phi_x r_i)^2
+				\end{bmatrix}$
+			}
+			\\[1.5em]
+			\resizebox{\linewidth}{!}{
+				$K_{ji} = 
+				\begin{bmatrix}
+					-(s\varphi c\phi_x + c\varphi c\phi_y)^2 & [K_{ji}]_{2,1} & [K_{ji}]_{3,1} & -s\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & c\varphi c\phi_z r_i(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_x r_i(s\varphi c\phi_x + c\varphi c\phi_y) \\
+					-(s\varphi c\phi_x + c\varphi c\phi_y)(s\varphi c\phi_y - c\varphi c\phi_x) & -(s\varphi c\phi_y - c\varphi c\phi_x)^2 & [K_{ji}]_{3,2} & -s\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & c\varphi c\phi_z r_i(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_x r_i(s\varphi c\phi_y - c\varphi c\phi_x) \\
+					-c\phi_z(s\varphi c\phi_x + c\varphi c\phi_y) & -c\phi_z(s\varphi c\phi_y - c\varphi c\phi_x) & -c\phi_z^2 & -s\varphi c\phi_z^2 r_i & c\varphi c\phi_z^2 r_i & c\phi_x c\phi_z r_i \\
+					-s\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & -s\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & -s\varphi c\phi_z^2 r_j & -(s\varphi c\phi_z)^2 r_i r_j & c\varphi s\varphi c\phi_z^2 r_i r_j & s\varphi c\phi_x c\phi_z r_i r_j \\
+					c\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & c\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & c\varphi c\phi_z^2 r_j & c\varphi s\varphi c\phi_z^2 r_i r_j & -(c\varphi c\phi_z)^2 r_i r_j & -c\varphi c\phi_x c\phi_z r_i r_j \\
+					-c\phi_x r_j(s\varphi c\phi_x + c\varphi c\phi_y) & -c\phi_x r_j(s\varphi c\phi_y - c\varphi c\phi_x) & -c\phi_x c\phi_z r_j & -s\varphi c\phi_x c\phi_z r_i r_j & c\varphi c\phi_x c\phi_z r_i r_j & c\phi_x^2 r_i r_j
+				\end{bmatrix}$
+			}
+			\\[1.5em]
+			\resizebox{\linewidth}{!}{
+				$K_{jj} = 
+				\begin{bmatrix}
+					(s\varphi c\phi_x + c\varphi c\phi_y)^2 & & & & & \text{sym} \\
+					(s\varphi c\phi_x + c\varphi c\phi_y)(s\varphi c\phi_y - c\varphi c\phi_x) & (s\varphi c\phi_y - c\varphi c\phi_x)^2 & & & & \\
+					c\phi_z(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_z(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_z^2 & & & \\
+					s\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & s\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & s\varphi c\phi_z^2 r_j & (s\varphi c\phi_z r_j)^2 & & \\
+					-c\varphi c\phi_z r_j(s\varphi c\phi_x + c\varphi c\phi_y) & -c\varphi c\phi_z r_j(s\varphi c\phi_y - c\varphi c\phi_x) & -c\varphi c\phi_z^2 r_j & -c\varphi s\varphi(c\phi_z r_j)^2 & (c\varphi c\phi_z r_j)^2 & \\
+					c\phi_x r_j(s\varphi c\phi_x + c\varphi c\phi_y) & c\phi_x r_j(s\varphi c\phi_y - c\varphi c\phi_x) & c\phi_x c\phi_z r_j & s\varphi c\phi_x c\phi_z r_j^2 & -c\phi_x c\phi_z r_j^2 & (c\phi_x r_j)^2
+				\end{bmatrix}$
+			}
+		\end{gathered}
+	\end{equation}
+	\begin{gather*}
+		\begin{alignedat}{2}
+			s\varphi &= \sin\varphi, &\qquad s\varphi^2 &= (\sin\varphi)^2 \\
+			c\varphi &= \cos\varphi, &\qquad c\varphi^2 &= (\cos\varphi)^2
+		\end{alignedat} \\[1ex] 
+		\begin{alignedat}{3}
+			\cos\phi_x &= \cos\beta \cos\alpha_n &\qquad \cos\phi_y &= \sin\alpha_n &\qquad \cos\phi_z &= \sin\beta \sin\alpha_n
+		\end{alignedat}
+	\end{gather*}
+	
+	As variáveis $q$ indicam as coordenadas generalizadas, os índices $i$ e $j$ representam os índices dos nós onde as engrenagens estão posicionadas. O parâmetro $\varphi$ representa o ângulo de orientação entre as engrenagens, $\beta$ é o ângulo de hélice das engrenagens e $\alpha_n$ representa o ângulo de pressão normal do par engrenado.
+	
+	Os ângulos $\phi_x$, $\phi_y$ e $\phi_z$ são de acordo com a Fig.~\ref{fig:force_component}, que representa a decomposição das forças no ponto de contato das engrenagens \citep{kaplan_paper_2013}.
+	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
+		\centering
+		\includegraphics[width=0.9\linewidth]{imagens/force_component.png}
+		\caption{Decomposição das forças no ponto de contato das engrenagens.}
+		\label{fig:force_component}
+	\end{figure}
+	
+	O parâmetro $K_g$ representa a rigidez do par engrenado ao longo da linha de ação. \citet{kaplan2015} apresenta uma metodologia de cálculo com base em parâmetros geométricos e do material das engrenagens, apresentada na Eq.~\ref{Eq:Kg}. Neste caso, é assumida a hipótese de que a rigidez dos dentes é mais significativa do que a rigidez do corpo da engrenagem.
+	\begin{equation}
+		K_g = \frac{c w E_1 E_2}{9(E_1+E_2)}
+		\label{Eq:Kg}
+	\end{equation}
+	
+	Onde $c$ representa a razão de contato do par engrenado, $w$ descreve a largura dos dentes das engrenagens, $E_1$ e $E_2$ são os módulos de elasticidade das engrenagens motriz e movida, respectivamente.
+	
+	\section{METODOLOGIA}
+	A metodologia proposta para a simulação do acoplamento dinâmico de rotores foi implementada computacionalmente. O modelo numérico foi desenvolvido assumindo nós discretizados com seis graus de liberdade para possibilitar a captura acurada dos comportamentos translacionais, de torção e de flexão. O sistema físico avaliado consiste em dois rotores de aço, dispostos paralelamente e acoplados por meio de um par de engrenagens helicoidais. O primeiro rotor atua como elemento motriz e o segundo como movido.
+	
+	A Tabela \ref{tab:parametros_multirotor} apresenta as principais propriedades geométricas e físicas dos eixos, mancais e engrenagens utilizadas na simulação. Nota-se que os rotores estão engrenados por meio de engrenagens helicoidais com ângulo de hélice de $25^\circ$.
+	
+	\begin{table}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
+		\centering
+		\caption{Resumo dos Parâmetros Físicos e de Simulação do Sistema MultiRotor}
+		\label{tab:parametros_multirotor}
+		\renewcommand{\arraystretch}{1.2} % Aumenta o espaçamento entre as linhas para melhor leitura
+		\begin{tabular}{@{}llcc@{}}
+			\toprule
+			\textbf{Subsistema} & \textbf{Parâmetro} & \textbf{Rotor 1 (Motriz)} & \textbf{Rotor 2 (Movido)} \\ \midrule
+			
+			\multirow{4}{*}{\textbf{Eixos}} 
+			& Material & \multicolumn{2}{c}{Aço (Padrão ROSS)} \\
+			& Comprimento Total & 0,5 m & 0,5 m \\
+			& Diâmetro Externo & 0,05 m & 0,05 m \\
+			& Diâmetro Interno & 0,0 m (Maciço) & 0,0 m (Maciço) \\ \midrule
+			
+			\multirow{6}{*}{\textbf{Engrenagens}} 
+			& Nó de Posicionamento & Nó 1 & Nó 1 \\
+			& Número de Dentes ($Z$) & 30 & 60 \\
+			& Diâmetro Primitivo ($d_p$) & 0,15 m & 0,30 m \\
+			& Largura do Dente ($b$) & 0,04 m & 0,04 m \\
+			& Ângulo de Pressão ($\alpha$) & \multicolumn{2}{c}{$20^\circ$} \\
+			& Ângulo de Hélice ($\beta$) & \multicolumn{2}{c}{$25^\circ$} \\ \midrule
+			
+			\multirow{2}{*}{\textbf{Mancais}} 
+			& Rigidez ($K_{xx}, K_{yy}, K_{zz}$) & \multicolumn{2}{c}{$10^7, 1.5 \times 10^7, 10^7$ N/m} \\
+			& Amortecimento ($C_{xx}, C_{yy}, C_{zz}$) & \multicolumn{2}{c}{$500, 800, 500$ N.s/m} \\ \midrule
+			
+			\multirow{2}{*}{\textbf{MultiRotor}} 
+			& Nós Acoplados & \multicolumn{2}{c}{Nó 1 (Rotor 1) $\leftrightarrow$ Nó 1 (Rotor 2)} \\
+			& Ângulo de Orientação & \multicolumn{2}{c}{$0,0$ rad (Alinhamento Horizontal)} \\ \midrule
+			
+			\multirow{2}{*}{\textbf{Desbalanceamento}} 
+			& Magnitude & 0,005 kg.m & - \\
+			& Local de Aplicação & Engrenagem 1 & - \\ \midrule
+			
+			\multirow{3}{*}{\textbf{Simulação}} 
+			& Rotação de Operação & \multicolumn{2}{c}{300 rad/s ($\sim$ 2865 RPM no Rotor 1)} \\
+			& Tempo Total & \multicolumn{2}{c}{0,5 s} \\
+			& Pontos Discretizados & \multicolumn{2}{c}{1000 passos} \\ 
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+	Para avaliar a resposta acoplada dos rotores e o desempenho da matriz de rigidez do engrenamento, um desbalanceamento mecânico de magnitude $0,005$ kg.m foi aplicado diretamente na engrenagem 1 (pertencente ao rotor motriz), atuando como uma força de excitação harmônica. A simulação da resposta temporal ocorreu de 0 a 0,5 segundos, com integração calculada em 1000 passos, mantendo a rotação constante de 300 rad/s no rotor motriz.
+
+	\section{RESULTADOS E DISCUSSÃO}
+	
+	Após a definição e modelagem do sistema multirotor engrenado, a simulação da resposta no domínio do tempo foi conduzida visando extrair o comportamento do sistema. A Figura \ref{fig:response} apresenta a resposta vibratória em regime permanente (recorte temporal de 0,35 a 0,50 segundos) para os seis graus de liberdade analisados no nó de acoplamento entre as duas engrenagens.
+	
+	A análise das respostas translacionais (X e Y) evidencia o forte acoplamento transversal garantido pelo modelo matemático adotado. O desbalanceamento imposto no rotor motriz gera uma excitação dominante na Engrenagem 1 (linha azul), contudo, verifica-se que parte substancial da vibração é transmitida à Engrenagem 2 (linha vermelha) através da interação elástica na linha de ação dos dentes. 
+	
+	Um dos resultados mais relevantes possibilitados por essa formulação é observado no gráfico do deslocamento translacional Z. Devido ao uso de engrenagens helicoidais (cujo ângulo de hélice é de $25^\circ$), surge uma importante componente de força na direção axial durante o contato. A resposta obtida confirma o surgimento de vibrações axiais acopladas à excitação radial, um comportamento complexo e condizente com transmissões helicoidais reais, que não se manifestaria na simulação de engrenagens de dentes retos.
+	
+	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
+		\centering
+		\includegraphics[width=\linewidth]{imagens/response.png}
+		\caption{Resposta vibratória em regime permanente nos seis graus de liberdade para as engrenagens acopladas.}
+		\label{fig:response}
+	\end{figure}
+	
+	Nota-se, nos gráficos rotacionais e torcionais ($Rx$, $Ry$ e $Rz$), o acoplamento de momentos. A resposta temporal confirma ainda a cinemática intrínseca do engrenamento avaliado: devido à razão do número de dentes ($Z_1/Z_2 = 30/60 = 0,5$), o rotor movido oscila com frequências características e fases influenciadas por sua velocidade angular, que é metade da rotação do rotor motriz. A amplitude de vibração na Engrenagem 1 apresenta-se consideravelmente maior na maioria dos graus de liberdade, o que é coerente com a aplicação direta do carregamento por desbalanceamento em sua própria massa.
+	
+	\section{CONCLUSÃO}	
+	Este trabalho apresentou de forma efetiva a implementação e simulação computacional de uma metodologia matricial para o acoplamento dinâmico de rotores através de engrenagens helicoidais. O modelo implementado através dos nós com seis graus de liberdade juntamente com a formulação direcional da matriz de rigidez de engrenamento demostrou ser altamente capaz de prever os modos complexos de acoplamento do conjunto.
+	
+	Os resultados no domínio do tempo comprovaram que a excitação harmônica primária por desbalanceamento em um rotor se propaga para o restante do sistema. Destaca-se a precisa captura da vibração na direção axial (deslocamento em Z), intrínseca ao uso de elementos com geometria helicoidal. A transferência de forças radiais, axiais e momentos torsores reforça que o modelo utilizado no \textit{software} ROSS é uma ferramenta confiável e indispensável para a análise preditiva em dinâmica de rotores. Análises desta natureza permitem otimizar projetos de caixas de transmissão robustas antes de sua fabricação ou testes em bancadas físicas.
+	
+	\section{AGRADECIMENTOS}
+	Os autores agradecem o suporte financeiro de órgãos de fomento à pesquisa e a infraestrutura oferecida pela Universidade Federal de Uberlândia (UFU) para a condução desta pesquisa em modelagem dinâmica.
+	
+	\section{REFERÊNCIAS}
+	
+	%	A lista de referências deve ser apresentada como uma nova seção, localizada ao final do artigo. A primeira linha de cada referência deve ser alinhada à esquerda. Todas as demais linhas devem ter recuo de 0,5 cm a partir da margem esquerda. Todas as referências incluídas na lista devem ter sido citadas no texto. As referências devem ser listadas em ordem alfabética, de acordo com o sobrenome do primeiro autor. Veja os exemplos a seguir:
+	
+	\bibliographystyle{EBDR2026}
+	\renewcommand{\refname}{}
+	\bibliography{bibfile}
+	
+	\section{TERMO DE RESPONSABILIDADE}
+	
+	O seguinte texto, devidamente adaptado ao número de autores, deve ser incluído na última seção do artigo:
+	
+	O(s) autor(es) é (são) o(s) único(s) responsável(is) pelo conteúdo publicado neste artigo.
+	
+\end{document}
