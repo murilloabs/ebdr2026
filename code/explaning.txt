@@ -1,0 +1,43 @@
+Essa é uma observação excelente e de altíssimo nível analítico! Você reparou em um dos efeitos dinâmicos mais interessantes que ocorrem em sistemas de eixos rotativos acoplados por engrenagens.
+
+A resposta curta é: o grau de liberdade $R_x$ não é diretamente excitado pelas forças de contato dos dentes, mas sim pelo **efeito giroscópico** dos rotores. E, devido à inversão de rotação entre as engrenagens combinada à inversão da flexão geométrica, ocorre o famoso "menos com menos dá mais", resultando na fase idêntica.
+
+Vamos detalhar a matemática e a física da formulação do ROSS (especificamente do arquivo `multi_rotor.py`) que explicam isso com exatidão:
+
+### 1. O Desacoplamento Geométrico da Rigidez em $R_x$
+
+No código, o `MultiRotor` foi configurado com `orientation_angle=0.0`. Isso significa que os centros dos dois rotores estão perfeitamente alinhados no eixo horizontal (X). O ponto de contato entre os dentes das engrenagens também reside ao longo desse eixo X.
+
+Quando as engrenagens helicoidais transmitem torque, surgem três forças no ponto de contato:
+
+* **Radial ($F_x$):** Atua ao longo do eixo X.
+* **Tangencial ($F_y$):** Atua na vertical, gerando o torque ($R_z$).
+* **Axial ($F_z$):** Atua ao longo do eixo do rotor (Z), gerando momento fletor.
+
+Como o braço de alavanca para essas forças está sobre o eixo X (o raio primitivo $r$), **nenhuma dessas forças consegue gerar um momento de torção/flexão ao redor do próprio eixo X**.
+Se você inspecionar a matriz calculada na função `compute_coupling_matrix()`, verá que quando o ângulo de orientação é 0 (onde $\sin(0) = 0$, representado pela variável `sp` no código), todos os termos de rigidez que acoplariam o movimento angular em $x$ de uma engrenagem na outra se anulam perfeitamente.
+
+### 2. A Origem da Vibração: Matriz Giroscópica ($G$)
+
+Se as engrenagens não se empurram fisicamente na rotação $R_x$, por que ambas apresentam oscilação nesse eixo no gráfico?
+
+A resposta está na **Matriz Giroscópica** da classe `MultiRotor` (função `G()`) e dos elementos de disco (`Ip`). Em um rotor girando a uma velocidade $\Omega$, qualquer inclinação em um eixo perpendicular (como $R_y$) gera um momento reativo giroscópico no outro eixo ortogonal ($R_x$).
+A equação simplificada do momento giroscópico atuando em $R_x$ é:
+
+$$M_{R_x} \propto I_p \cdot \Omega \cdot \dot{\theta}_y$$
+
+Ou seja, a oscilação que vemos em $R_x$ é um "eco" giroscópico provocado pelo fato de $R_y$ estar oscilando severamente devido ao empuxo axial ($F_z$).
+
+### 3. A Matemática da Fase Perfeita (Menos com Menos = Mais)
+
+Agora vem a cereja do bolo, que justifica o porquê de os gráficos de $R_x$ estarem **em fase**, enquanto os de $R_y$ estão defasados em $180^\circ$:
+
+1. **Flexão Invertida ($R_y$ defasado):** A força axial ($F_z$) atua com a mesma magnitude, mas em sentidos opostos nas duas engrenagens (ação e reação). Isso faz com que os rotores se "dobrem" em sentidos opostos no plano Y. Como resultado, a velocidade angular $\dot{\theta}_y$ da Engrenagem 2 tem sinal oposto à da Engrenagem 1.
+2. **Rotação Invertida ($\Omega$ defasado):** Como temos um engrenamento externo, a Engrenagem 2 obrigatoriamente gira no sentido contrário ao da Engrenagem motriz 1. No código `multi_rotor.py`, isso é tratado pela função `check_speed()`, onde a velocidade do nó movido é multiplicada por `-self.mesh.gear_ratio`.
+
+
+3. **O Produto Giroscópico:** Substituindo isso na equação do momento giroscópico para a Engrenagem 2, temos o produto da velocidade de giro negativa pela velocidade angular negativa:
+
+$$M_{R_x2} \propto (-\Omega) \cdot (-\dot{\theta}_y)$$
+
+O sinal negativo do sentido de rotação é cancelado pelo sinal negativo da direção de flexão. Consequentemente, o momento giroscópico induzido na Engrenagem 2 atua no **mesmo sentido** do induzido na Engrenagem 1. É por isso que, visualmente no gráfico, a resposta vibratória transversal em $R_x$ é a única que acompanha perfeitamente os picos e vales (estão em fase) em ambas as engrenagens.

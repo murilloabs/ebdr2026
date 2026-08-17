@@ -1,5 +1,6 @@
 import sys
-sys.path.append(r"C:\Users\M\Desktop\ROSS\ross")
+# sys.path.append(r"C:\Users\M\Desktop\ROSS\ross")
+sys.path.append(r"C:\Users\Murillo\Documents\ROSS\ross_230")
 
 import numpy as np
 import ross as rs
