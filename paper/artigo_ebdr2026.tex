@@ -57,7 +57,7 @@
 \renewcommand{\institution}[1]{{\normalfont\small #1}}
 
 % Cabeçalho superior das páginas atualizado com seus dados
-\def\shortauthor{M. A. B. Sousa, A. A. Cavallini Jr. e V. Steffen Jr.}
+\def\shortauthor{Murillo A. B. Sousa, Jessica G. F. Santos, Aldemir A. Cavallini Jr. e Valder Steffen Jr.}
 \def\shorttitle{Acoplamento Dinâmico de Rotores Engrenados}
 
 \begin{document}
@@ -69,14 +69,15 @@
 			\vspace{2mm}
 			{\centering \title{Acoplamento Dinâmico de Rotores Engrenados} \par} \vspace{4mm}
 			\authors{Murilo Alvaro Borges de Sousa} \\
+			\authors{Jessica Guarato de Freitas Santos} \\
 			\authors{Aldemir Aparecido Cavallini Jr.} \\
 			\authors{Valder Steffen Jr.} \\
 			\institution{Universidade Federal de Uberlândia - UFU} \\
-			\institution{murilloabs@ufu.br; aacjunior@ufu.br; vsteffen@ufu.br}\\
+			\institution{murilloabs@ufu.br; jessica.guarato@ufu.br; aacjunior@ufu.br; vsteffen@ufu.br}\\
 			\\
-			\abstract{\textbf{Resumo.} Este trabalho apresenta uma metodologia matricial baseada em elementos finitos para modelagem e simulação do acoplamento dinâmico de rotores engrenados. Como sistemas de transmissão são vitais na indústria, compreender sua dinâmica é fundamental para evitar falhas. A metodologia foi implementada no \textit{Rotordynamic Open-Source Software} (ROSS), adotando nós com seis graus de liberdade para capturar efeitos translacionais, rotacionais e de torção. A matriz de rigidez de engrenamento considera a geometria do par helicoidal. Simulou-se um sistema com dois rotores (motriz e movido) sujeitos a um desbalanceamento, e os resultados temporais comprovaram o acoplamento efetivo entre as direções flexionais e axiais, intrínseco ao perfil helicoidal. Conclui-se que a abordagem é consistente para análises robustas de caixas de transmissão.}\\
+			\abstract{\textbf{Resumo.} Este trabalho apresenta uma metodologia matricial baseada em elementos finitos para modelagem e simulação do acoplamento dinâmico de rotores engrenados. Como sistemas de transmissão são essenciais na indústria, compreender sua dinâmica é de fundamental importância. A metodologia foi implementada no \textit{Rotordynamic Open-Source Software} (ROSS), adotando nós com seis graus de liberdade para capturar efeitos translacionais, rotacionais e de torção. A matriz de rigidez de engrenamento considera a geometria de dentes helicoidais. Foi simulado um sistema com dois rotores (motriz e movido) sujeitos a um desbalanceamento, e os resultados temporais comprovaram o acoplamento efetivo entre as direções flexionais e axiais, intrínseco ao perfil helicoidal. Por fim, a abordagem é consistente para análises robustas de caixas de transmissão.}\\
 			\\
-			\textbf{Palavras-chave:} Dinâmica de Rotores, Engrenagens Helicoidais, Método de Elementos Finitos, Acoplamento Dinâmico, ROSS \vspace{2mm}
+			\textbf{Palavras-chave:} Dinâmica de Rotores, Engrenagens Helicoidais, MEF, ROSS \vspace{2mm}
 		}
 	\end{tabular}
 	
@@ -113,7 +114,7 @@
 	
 	A metodologia de acoplamento adotada baseia-se nos trabalhos de \citet{stringer2008, kaplan_paper_2013, kaplan2015}. Para o movimento conjunto, acoplam-se as matrizes nos nós de cada engrenagem ($i$ e $j$), reescrevendo a equação de movimento (Eq.~\ref{Eq:mov-alt}) para contemplar as propriedades de ambos os rotores.
 	
-	A rigidez de acoplamento $[K_{mesh}]$ atua na direção da linha de ação, não na linha entre centros (Fig.~\ref{fig:mesh_repr}), sendo expressa pela Eq.~\ref{Eq:k_mesh}. As submatrizes ($K_{ii}, K_{ij}$, etc.) seguem a formulação detalhada na Eq.~\ref{eq:k_matrices} \citep{stringer2008}.
+	A rigidez de acoplamento $[K_{mesh}]$ atua na direção da linha de ação, não na linha entre centros (Fig.~\ref{fig:mesh_repr}), sendo expressa pela Eq.~\ref{Eq:k_mesh}. As submatrizes ($K_{ii}, K_{jj}, K_{ij}$ e $K_{ji}$) seguem a formulação detalhada na Eq.~\ref{eq:k_matrices} \citep{stringer2008}.
 	\begin{figure}%[!ht] % <--- [H] SUBSTITUÍDO POR [!ht]
 		\centering
 		\includegraphics[width=0.6\linewidth]{imagens/gear_mesh_spring.png}
@@ -209,7 +210,7 @@
 	\end{equation}
 	
 	\section{METODOLOGIA}
-	Desenvolveu-se um modelo computacional com nós de seis graus de liberdade para simular rotores acoplados. O sistema consiste em dois rotores de aço (Rotor 1 motriz, Rotor 2 movido), engrenados através de engrenagens helicoidais com $25^\circ$ de inclinação, detalhados na Tabela \ref{tab:parametros_multirotor}.
+	Foi desenvolvido um modelo computacional com nós de seis graus de liberdade para simular rotores acoplados. O sistema consiste em dois rotores de aço (Rotor 1 motriz, Rotor 2 movido), engrenados através de engrenagens helicoidais com $25^\circ$ de inclinação, detalhados na Tabela \ref{tab:parametros_multirotor}.
 	
 	\begin{table}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
 		\centering
@@ -257,11 +258,15 @@
 	
 	\section{RESULTADOS E DISCUSSÃO}
 	
-	A Figura \ref{fig:response} apresenta a resposta vibratória em regime permanente (de 0,35 a 0,50 segundos). A análise das respostas translacionais ($X$ e $Y$) evidencia o forte acoplamento transversal: a excitação gerada pelo desbalanceamento no motriz é substancialmente transmitida à Engrenagem 2 pela linha de ação. 
+	A Figura \ref{fig:response} apresenta a resposta vibratória em regime permanente (de 0,35 a 0,50 segundos). A análise das respostas translacionais ($X$ e $Y$) evidencia o acoplamento entre os rotores. A excitação gerada pelo desbalanceamento no motriz é transmitida à Engrenagem 2 pela linha de ação.
 	
-	O resultado mais relevante habilitado por esta formulação espacial ocorre no deslocamento $Z$. Devido ao ângulo de hélice ($\beta = 25^\circ$), surge um componente de força axial durante o contato, gerando vibrações acopladas que não ocorreriam em dentes retos.
+	O resultado mais relevante habilitado por esta formulação ocorre no deslocamento $Z$. Devido ao ângulo de hélice ($\beta = 25^\circ$), surge um componente de força axial durante o contato, gerando vibrações acopladas que não ocorreriam em dentes retos.
 	
-	Os comportamentos rotacionais e torcionais ($Rx$, $Ry$ e $Rz$) reforçam o acoplamento dinâmico. Adicionalmente, o rotor movido oscila com frequências características e fases influenciadas por sua velocidade angular inferior, confirmando a cinemática regida pela relação de transmissão ($Z_1/Z_2 = 0,5$).
+	As respostas rotacionais e torcionais ($R_x$, $R_y$ e $R_z$) evidenciam o forte acoplamento dinâmico entre os eixos. Um comportamento de destaque ocorre em $R_x$, onde as duas engrenagens oscilam em fase. 
+	Esse sincronismo decorre do acoplamento giroscópico, no qual a dupla inversão vetorial, imposta pela rotação reversa e pelos momentos fletores opostos do efeito axial, gera momentos reativos síncronos.
+%	Isso acontece devido ao efeito giroscópico: embora a engrenagem movida gire no sentido contrário e seja "dobrada" em direções opostas em $R_y$ devido ao empuxo axial, essas duas inversões físicas se anulam. Como resultado, o momento giroscópico atua na mesma direção espacial para ambas as engrenagens.
+%	Esse fenômeno é um resultado direto do acoplamento giroscópico dos rotores. Na mecânica do engrenamento helicoidal, a componente de empuxo axial gera momentos fletores de sentidos opostos em cada eixo, induzindo deflexões angulares contrárias na direção $R_y$. Simultaneamente, a cinemática do engrenamento externo impõe à engrenagem movida uma velocidade angular reversa. Pela formulação da dinâmica de rotores, o momento giroscópico reativo é proporcional ao produto da velocidade de rotação pela taxa de deflexão fletora transversal. Como o rotor movido sofre uma dupla inversão vetorial --- rotação oposta e flexão fletora oposta ---, os sinais algébricos se cancelam. Consequentemente, os momentos giroscópicos induzidos tornam-se colineares e atuam no mesmo sentido espacial, forçando o sistema a oscilar em fase na direção $R_x$.
+	 Além disso, nota-se que o rotor movido vibra de forma mais lenta, o que é totalmente coerente com sua velocidade de rotação reduzida pela metade, validando a relação de transmissão do sistema ($Z_1/Z_2 = 0,5$).
 	
 	\begin{figure}[H] % <--- [H] SUBSTITUÍDO POR [!ht]
 		\centering
@@ -273,7 +278,7 @@
 %	Os comportamentos rotacionais e torcionais ($Rx$, $Ry$ e $Rz$) reforçam o acoplamento dinâmico. Adicionalmente, o rotor movido oscila com frequências características e fases influenciadas por sua velocidade angular inferior, confirmando a cinemática regida pela relação de transmissão ($Z_1/Z_2 = 0,5$).
 	
 	\section{CONCLUSÃO}	
-	A formulação matricial com nós de seis graus de liberdade demonstrou ser altamente capaz na predição do acoplamento dinâmico por engrenagens helicoidais. Os resultados comprovaram a propagação da excitação primária, com destaque para a precisa captura das vibrações axiais inerentes a perfis helicoidais. A transferência integrada de forças (radiais, axiais e momentos torsores) valida o modelo utilizado no \textit{software} ROSS como uma ferramenta confiável para otimizar e analisar projetos preditivos em caixas de transmissão.
+	A formulação matricial com nós de seis graus de liberdade demonstrou ser capaz de realizar o acoplamento dinâmico por engrenagens helicoidais. Os resultados comprovaram a propagação da excitação primária, com destaque para a captura das vibrações axiais inerentes a perfis helicoidais. A transferência integrada de forças (radiais, axiais e momentos torsores) utilizada no modelo presente \textit{software} ROSS é uma ferramenta confiável para análise de projetos em caixas de transmissão.
 	
 	\section{AGRADECIMENTOS}
 	Os autores agradecem o suporte financeiro de órgãos de fomento à pesquisa e a infraestrutura oferecida pela UFU.
