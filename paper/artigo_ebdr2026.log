@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.27)  18 AUG 2026 14:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.1.27)  19 AUG 2026 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1841,7 +1841,7 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `artigo_ebdr2026.out' has not changed.
-(rerunfilecheck)             Checksum: 6DF69D80C7FAD88C105B9B50568DA75D;1431.
+(rerunfilecheck)             Checksum: 88F83F309E26243C9866F6B8A1D362A5;1434.
  ) 
 Here is how much of TeX's memory you used:
  47744 strings out of 474485
@@ -1863,7 +1863,7 @@ eX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Murillo/AppData/Local/Programs
 ams/MiKTeX/fonts/type1/public/newtx/ztmbi.pfb><C:/Users/Murillo/AppData/Local/P
 rograms/MiKTeX/fonts/type1/public/newtx/ztmr.pfb><C:/Users/Murillo/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/newtx/ztmri.pfb>
-Output written on artigo_ebdr2026.pdf (4 pages, 610859 bytes).
+Output written on artigo_ebdr2026.pdf (4 pages, 610800 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  35 named destinations out of 1000 (max. 500000)
