@@ -24,7 +24,8 @@ Using proper ROSS pattern with n_link:
 - Support bearing at housing node (stiffness to ground)
 - PointMass at housing node (housing mass)
 """
-
+import sys
+sys.path.append(r"C:\Users\Murillo\Documents\ROSS\ross_230\ross")
 import numpy as np
 import pandas as pd
 import ross as rs
